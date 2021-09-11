@@ -109,11 +109,52 @@
   <li class="hide-on-med-and-down nav-item">
     
     <a href="/about" class="waves-effect waves-light">
+
       
       <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
       
       <span>关于</span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
     </a>
+    <ul class="sub-nav menus_item_child ">
+      
+      <li>
+        <a href="/musics">
+          
+          <i class="fas fa-bookmark" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>Musics</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/movies">
+          
+          <i class="fas fa-bookmark" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>Movies</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/books">
+          
+          <i class="fas fa-bookmark" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>Books</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/galleries">
+          
+          <i class="fas fa-bookmark" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>Galleries</span>
+        </a>
+      </li>
+      
+    </ul>
     
   </li>
   
@@ -222,12 +263,56 @@
         
         <li class="m-nav-item">
 	  
-		<a href="/about" class="waves-effect waves-light">
+		<a href="javascript:;">
 			
-			    <i class="fa-fw fas fa-user-circle"></i>
+				<i class="fa-fw fas fa-user-circle"></i>
 			
 			关于
+			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
 		</a>
+            <ul  style="background:  ;" >
+              
+                <li>
+
+                  <a href="/musics " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-bookmark" style="position: absolute;left:50px" ></i>
+			      
+		          <span>Musics</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/movies " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-bookmark" style="position: absolute;left:50px" ></i>
+			      
+		          <span>Movies</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/books " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-bookmark" style="position: absolute;left:50px" ></i>
+			      
+		          <span>Books</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/galleries " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-bookmark" style="position: absolute;left:50px" ></i>
+			      
+		          <span>Galleries</span>
+                  </a>
+                </li>
+              
+            </ul>
           
         </li>
         
@@ -519,6 +604,52 @@ hexo <span class="token keyword">new</span> page
   &#39;&amp;#125;&#39;: &#39;&#125;&#39;        //添加的代码
 &#125;;
 </code></pre>
+<h4 id="2-7-2-二级菜单配置方法"><a href="#2-7-2-二级菜单配置方法" class="headerlink" title="2.7.2. 二级菜单配置方法"></a>2.7.2. 二级菜单配置方法</h4><p>如果你需要二级菜单则可以在原基本菜单导航的基础上如下操作</p>
+<ol>
+<li><p>在需要添加二级菜单的一级菜单下添加 <code>children</code> 关键字 (如:<code>About</code> 菜单下添加 <code>children</code>)</p>
+</li>
+<li><p>在 <code>children</code> 下创建二级菜单的 名称 name, 路径 url 和图标 icon.</p>
+</li>
+<li><p>注意每个二级菜单模块前要加 <code>-</code>.</p>
+</li>
+<li><p>注意缩进格式</p>
+<pre><code>menu:
+  Index:
+    url: /
+    icon: fas fa-home
+  Tags:
+    url: /tags
+    icon: fas fa-tags
+  Categories:
+    url: /categories
+    icon: fas fa-bookmark
+  Archives:
+    url: /archives
+    icon: fas fa-archive
+  About:
+    url: /about
+    icon: fas fa-user-circle-o
+  Friends:
+    url: /friends
+    icon: fas fa-address-book
+  Medias:
+    icon: fas fa-list
+    children:
+      - name: Musics
+        url: /musics
+        icon: fas fa-music
+      - name: Movies
+        url: /movies
+        icon: fas fa-film
+      - name: Books
+        url: /books
+        icon: fas fa-book
+      - name: Galleries
+        url: /galleries
+        icon: fas fa-image
+</code></pre>
+</li>
+</ol>
 <h3 id="（2）主题美化"><a href="#（2）主题美化" class="headerlink" title="（2）主题美化"></a>（2）主题美化</h3><p>首先建议把作者教程过一遍<a target="_blank" rel="noopener" href="https://blinkfox.github.io/">闪烁之狐</a>、作者 <a target="_blank" rel="noopener" href="https://blinkfox.github.io/friends/">友链</a>是第二推荐。</p>
 <h4 id="1、修改主题的基本信息【主题】"><a href="#1、修改主题的基本信息【主题】" class="headerlink" title="1、修改主题的基本信息【主题】"></a>1、修改主题的基本信息【主题】</h4><pre><code>#这是根目录下的配置文件信息
 title: 过客~励む   #这是网站标题
