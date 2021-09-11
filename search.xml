@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>最全示例</title>
+      <link href="/2021/09/11/zui-quan-shi-li/"/>
+      <url>/2021/09/11/zui-quan-shi-li/</url>
+      
+        <content type="html"><![CDATA[<p>#讲课费</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>毕业</title>
+      <link href="/2021/09/11/bi-ye/"/>
+      <url>/2021/09/11/bi-ye/</url>
+      
+        <content type="html"><![CDATA[<p>#任务</p><p>1、完成简历，找到工作</p><p>中石油、中海油、其他随便.找工作&gt;考研</p><p>2、考研</p><p>政治、英语优先。流体力学、数二</p><p>3、毕业</p><p>必修：海洋地质学、工程力学、创业基础</p><p>任选：选一学分的课，补满</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>配置及美化教程</title>
+      <link href="/2021/09/11/pei-zhi-ji-mei-hua-quan-jiao-cheng/"/>
+      <url>/2021/09/11/pei-zhi-ji-mei-hua-quan-jiao-cheng/</url>
+      
+        <content type="html"><![CDATA[<p>#前言</p><p>  内容可以说是完全复制于他人，基本过程是便应用到自己博客上边复制，只是作为个人认为的最易操作综述。还有就是，CSDN博主<a href="https://blog.csdn.net/victoryxa">Yafine</a>《hexo+Github博客搭建》三篇可谓博大精深，强烈推荐。</p><h2 id="一、配置及错误处理"><a href="#一、配置及错误处理" class="headerlink" title="一、配置及错误处理"></a>一、配置及错误处理</h2><h3 id="（1）配置"><a href="#（1）配置" class="headerlink" title="（1）配置"></a>（1）配置</h3><p>一般的,npm类需要在博客文件夹内运行cmd，而博客部署在博客文件夹内运行GIt bash。比如：</p><p><a href="https://imgtu.com/i/hzTkfU"><img src="https://z3.ax1x.com/2021/09/11/hzTkfU.png" alt="" border="0" style="zoom:25%;" /></a></p><p><a href="https://imgtu.com/i/hzTEpF"><img src="https://z3.ax1x.com/2021/09/11/hzTEpF.jpg" alt="" border="0" style="zoom: 25%;" /></a></p><h3 id="（2）常见错误"><a href="#（2）常见错误" class="headerlink" title="（2）常见错误"></a>（2）常见错误</h3><hr><h2 id="二、GIt基本指令"><a href="#二、GIt基本指令" class="headerlink" title="二、GIt基本指令"></a>二、GIt基本指令</h2><p>首先明确， 在GIT环境中，Ctrl+ins  复制  、Shift+ins 粘贴、Ctrl+C中断进程。（额外知识：笔记本中Fn+F1等，才能调用上部的F快捷键。）</p><h3 id="（1）基本指令"><a href="#（1）基本指令" class="headerlink" title="（1）基本指令"></a>（1）基本指令</h3><p>1、<strong>hexo clean 或hexo cl</strong>  清理缓存，出现错误先用它。</p><p>2、<strong>hexo g</strong>     更新内容</p><p>3、<strong>hexo s</strong>     启动本地服务器，预览。默认地址： <a href="http://localhost:4000/%E3%80%82">http://localhost:4000/。</a></p><ul><li><p>预览过程中要始终保持后台开启，否则网站就无法链接。</p></li><li><p>预览的同时可以修改文章内容或主题代码，保存后刷新页面即可。</p></li><li><p>对 站点配置<code>_config.yml</code> 的修改，需要重启本地服务器后才能预览效果。</p></li></ul><p>4、<strong>hexo d</strong>     部署设定到仓库</p><p>综上，<strong>hexo clean &amp;&amp; hexo g &amp;&amp; hexo s</strong>，可一条龙服务。</p><h3 id="（2）内容创建"><a href="#（2）内容创建" class="headerlink" title="（2）内容创建"></a>（2）内容创建</h3><pre class="line-numbers language-cpp"><code class="language-cpp">hexo <span class="token keyword">new</span> <span class="token string">"新文章"</span>hexo <span class="token keyword">new</span>  draft <span class="token string">"草稿文章"</span>hexo <span class="token keyword">new</span> page<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><ul><li><p>不加引号也可以。</p></li><li><p><code>hexo new page</code> 创建一个文件夹，亦即新网页。</p></li><li><p>draft 为草稿文档，不会展现在博客上，可用<code>hexo publish &quot;草稿文章&quot;</code> 发布成正式文章。</p></li><li><p>预览草稿文章 <code>hexo s --drafts</code>。</p><hr></li></ul><h2 id="三、Typora基本"><a href="#三、Typora基本" class="headerlink" title="三、Typora基本"></a>三、Typora基本</h2><p>1、外部内容引用<br>含图片、链接、公式、音乐等</p><p>2、目录格式<br>本人实验结果为，在Matery主题中，一级目录二号标题，二级目录三级标题可正确适配。</p><p>3、代码<br>一般新建代码框，复制进来就行，其他一点别动，否则网页不显示。建议启用快捷键。<br>4、其它格式<br>（1）直接使用<strong>enter</strong>键来切换到下一个段落，如果一行的长度没有占完，而下一行还想保持在同一段的话可以使用<strong>shift+enter</strong>快捷键。<br>（2）分割线可以使用<code>***</code>或者是 ‘—‘再按下<strong>enter</strong>。</p><p>详见：【简书】<a href="https://www.jianshu.com/p/783d30c98f56">Typora使用教程</a><br>           【少数派】<a href="https://sspai.com/post/54912/">Typora 完全使用详解</a></p><hr><h2 id="四、美化篇"><a href="#四、美化篇" class="headerlink" title="四、美化篇"></a>四、美化篇</h2><p>时刻分清站点配置文件、主题配置文件。如在F盘新建博客文件夹，名称为blog，那么站点配置文件的路径F:/blog/_config.yml，主题配置文件路径F:/blog/themes/matery/_config.yml。</p><p>代码没有的情况下可大胆添加，当然出错了还是要删掉。</p><h3 id="（1）站点配置"><a href="#（1）站点配置" class="headerlink" title="（1）站点配置"></a>（1）站点配置</h3><h4 id="1、代码复制问题"><a href="#1、代码复制问题" class="headerlink" title="1、代码复制问题"></a>1、代码复制问题</h4><p>【cmd】下载配置</p><pre><code>npm i -S hexo-prism-plugin</code></pre><p>【站点】在站点配置文件中打开，将以下代码放在最后即可，重新启动生成部署。</p><pre><code>prism_plugin:  mode: &#39;preprocess&#39; # realtime/preprocess  theme: &#39;default&#39;  line_number: false # default false</code></pre><p>【站点】配置Hexo根目录的<code>.config.yml</code></p><pre><code>highlight:  enable: false # 关闭原有的高亮代码</code></pre><p>【css】修改代码块</p><p>打开<code>themes\source\css\matery.css</code>，修改代码块CSS样式如下,一般需添加</p><pre><code>pre &#123;    padding: 1.5rem 1.5rem 1.5rem 3.3rem !important;    margin: 1rem 0 !important;    background: #272822;    overflow: auto;    border-radius: 0.35rem;    tab-size: 4;&#125;</code></pre><p>代码背景设置（同上）</p><pre><code>pre code &#123;    padding: 0;    color: #111111;    background-color: #a1f7e4ce;&#125;</code></pre><p>三、 代码块中的<code>&#123;&#125;</code>无法解析问题解决</p><p>node_modules/hexo-prism-plugin/src/index.js文件中map里未支持大括号，补上以下内容后发现有效，即在map中加上对应字符即可:</p><pre><code>const map = &#123;  &#39;&amp;#39;&#39;: &#39;\&#39;&#39;,  &#39;&amp;amp;&#39;: &#39;&amp;&#39;,  &#39;&amp;gt;&#39;: &#39;&gt;&#39;,  &#39;&amp;lt;&#39;: &#39;&lt;&#39;,  &#39;&amp;quot;&#39;: &#39;&quot;&#39;,  &#39;&amp;#123;&#39;: &#39;&#123;&#39;,    //添加的代码  &#39;&amp;#125;&#39;: &#39;&#125;&#39;        //添加的代码&#125;;</code></pre><h3 id="（2）主题美化"><a href="#（2）主题美化" class="headerlink" title="（2）主题美化"></a>（2）主题美化</h3><p>首先建议把作者教程过一遍<a href="https://blinkfox.github.io/">闪烁之狐</a>、作者 <a href="https://blinkfox.github.io/friends/">友链</a>是第二推荐。</p><h4 id="1、修改主题的基本信息【主题】"><a href="#1、修改主题的基本信息【主题】" class="headerlink" title="1、修改主题的基本信息【主题】"></a>1、修改主题的基本信息【主题】</h4><pre><code>#这是根目录下的配置文件信息title: 过客~励む   #这是网站标题subtitle: 励む    #这是网站副标题subtitle# 下面两个description,keywords，需要填上，如果想让搜索引擎收录，这个做SEO优化必不可忽视的两个属性description: 专注于Web,分享生活,分享知识  #网站描述keywords: [HTML, CSS, JavaScript, JQuery, React, Vue.js等]  #网站的关键词author: YangAir  #作者，文章版权所显示的language: zh-CN  #网站语言，不填写，默认为英文timezone:   #时区，可以不填写</code></pre><h4 id="2、修改主题的logo图和favicon图标-【主题】"><a href="#2、修改主题的logo图和favicon图标-【主题】" class="headerlink" title="2、修改主题的logo图和favicon图标 【主题】"></a>2、修改主题的logo图和favicon图标 【主题】</h4><pre><code># 配置网站favicon和网站LOGOfavicon: /favicon.pnglogo: /favicon.png</code></pre><h4 id="3、去掉右上角的github图标【主题】"><a href="#3、去掉右上角的github图标【主题】" class="headerlink" title="3、去掉右上角的github图标【主题】"></a>3、去掉右上角的github图标【主题】</h4><pre><code># Whether to display fork me on github icon and link, default true, You can change it to your repo address# 配置是否在 header 中显示 fork me on github 的图标，默认为true，你可以修改为你的仓库地址.githubLink:  enable: true  url: https://github.com/blinkfox/hexo-theme-matery  title: Fork Me</code></pre><h4 id="4、去掉主页的Github按钮【主题】"><a href="#4、去掉主页的Github按钮【主题】" class="headerlink" title="4、去掉主页的Github按钮【主题】"></a>4、去掉主页的Github按钮【主题】</h4><pre><code># 首页 banner 中的第二个按钮的配置，包括按钮的显示名称、font awesome图标和按钮的超链接.indexbtn:  enable: true  name: Github  icon: fab fa-github-alt  url: https://github.com/blinkfox/hexo-theme-matery</code></pre><h4 id="5、修改导航栏颜色以及透明效果【css】"><a href="#5、修改导航栏颜色以及透明效果【css】" class="headerlink" title="5、修改导航栏颜色以及透明效果【css】"></a>5、修改导航栏颜色以及透明效果【css】</h4><p>打开<code>themes/matery/source/css/matery.css</code>文件，大约在250行，有一个<code>.bg-color</code>属性，修改其属性值即可，代码如下：</p><pre><code>.bg-color &#123;    background-image: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%); //修改成自己喜欢的颜色值    opacity: 0.8;  //透明效果 值范围 0~1，看情况自己修改&#125;</code></pre><h4 id="6、动态-搞笑标题【ejs】"><a href="#6、动态-搞笑标题【ejs】" class="headerlink" title="6、动态/搞笑标题【ejs】"></a>6、动态/搞笑标题【ejs】</h4><p><code>themes/matery/layout/layout.ejs</code>文件中添加如下代码：</p><pre><code>&lt;script type=&quot;text/javascript&quot;&gt;    var OriginTitile=document.title,st;    document.addEventListener(&quot;visibilitychange&quot;,function()&#123;        document.hidden?(document.title=&quot;ヽ(●-`Д´-)ノ你要玩捉迷藏嘛&quot;,clearTimeout(st)):(document.title=&quot;(Ő∀Ő3)ノ好哦！&quot;,st=setTimeout(function()&#123;document.title=OriginTitile&#125;,3e3))    &#125;)&lt;/script&gt;</code></pre><h4 id="7-修改滑动条【css】"><a href="#7-修改滑动条【css】" class="headerlink" title="7.修改滑动条【css】"></a>7.修改滑动条【css】</h4><p>在<code>themes\Matery\source\css\matery.css</code>样式添加如下：</p><pre><code>/* 滚动条 */::-webkit-scrollbar-thumb &#123;    background-color: #FF2A68;    background-image: -webkit-linear-gradient(45deg,rgba(255,255,255,.4) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.4) 50%,rgba(255,255,255,.4) 75%,transparent 75%,transparent);    border-radius: 3em;&#125;::-webkit-scrollbar-track &#123;    background-color: #ffcacaff;    border-radius: 3em;&#125;::-webkit-scrollbar &#123;    width: 8px;    height: 15px;&#125;</code></pre><h2 id="五、参考文章"><a href="#五、参考文章" class="headerlink" title="五、参考文章"></a>五、参考文章</h2><p>1、[美化] [CSDN] [Yafine]  <a href="https://blog.csdn.net/victoryxa/article/details/105841309">Hexo+Github博客搭建之Matery主题个性化修改篇（一）</a></p><p>2、[内容] [简书] [格物_志]   <a href="https://www.jianshu.com/p/4235980d796a">Hexo 基本命令</a></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>直言命题的自演</title>
+      <link href="/2021/09/10/zhi-yan-ming-ti-de-zi-yan/"/>
+      <url>/2021/09/10/zhi-yan-ming-ti-de-zi-yan/</url>
+      
+        <content type="html"><![CDATA[<p>#命题结构分析</p><p>  直言命题有三部分组成</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>404</title>
+      <link href="/2021/09/10/404/"/>
+      <url>/2021/09/10/404/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>右击</title>
+      <link href="/2021/09/10/you-ji/"/>
+      <url>/2021/09/10/you-ji/</url>
+      
+        <content type="html"><![CDATA[<p>akk客家话</p><p>插入图片<a href="https://imgtu.com/i/hj64UI"><img src="https://z3.ax1x.com/2021/09/10/hj64UI.png" alt="hj64UI.png" border="0" /></a></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hello World</title>
+      <link href="/2021/09/10/hello-world/"/>
+      <url>/2021/09/10/hello-world/</url>
+      
+        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="快速开始"><a href="#快速开始" class="headerlink" title="快速开始"></a>快速开始</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class="line-numbers language-bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class="line-numbers language-bash"><code class="language-bash">$ hexo server<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class="line-numbers language-bash"><code class="language-bash">$ hexo generate<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class="line-numbers language-bash"><code class="language-bash">$ hexo deploy<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+  
+  
+</search>
