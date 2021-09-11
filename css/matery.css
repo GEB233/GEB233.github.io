@@ -102,6 +102,9 @@ blockquote {
 
 pre {
     padding: 2rem 1rem 1rem 1rem !important;
+    margin: 1rem 0 !important;
+    background: #a1f7e4ce;
+    overflow: auto;
     border-radius: 0.35rem;
     tab-size: 4;
 }
@@ -110,7 +113,7 @@ pre {
     content: " ";
     position: absolute;
     border-radius: 50%;
-    background: #ff5f56;
+    background: #f3730b;
     width: 12px;
     height: 12px;
     top: 0;
@@ -125,8 +128,8 @@ code {
     top: 13px !important;
     font-family: Inconsolata, Monaco, Consolas, 'Courier New', Courier, monospace;
     font-size: 0.91rem;
-    color: #e96900;
-    background-color: #f8f8f8;
+    color: #269fe6;
+    background-color: #51f8c0;
     border-radius: 2px;
 }
 
@@ -183,8 +186,8 @@ code {
 
 pre code {
     padding: 0;
-    color: #e8eaf6;
-    background-color: #272822;
+    color: #111111;
+    background-color: #a1f7e4ce;
 }
 
 /* 键盘 kbd 标签样式 */
@@ -2143,4 +2146,21 @@ p.search-result-summary{
     height: 50px;
     padding: 0;
     margin: 0;
+}
+
+/*以下为新增*/
+
+/* 滚动条 */
+::-webkit-scrollbar-thumb {
+    background-color: #2affe3;
+    background-image: -webkit-linear-gradient(45deg,rgba(255,255,255,.4) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.4) 50%,rgba(255,255,255,.4) 75%,transparent 75%,transparent);
+    border-radius: 3em;
+}
+::-webkit-scrollbar-track {
+    background-color: rgb(116, 226, 13);
+    border-radius: 3em;
+}
+::-webkit-scrollbar {
+    width: 8px;
+    height: 15px;
 }
