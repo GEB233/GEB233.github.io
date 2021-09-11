@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="404, GEB">
+    <meta name="keywords" content="配置及美化教程, GEB">
     <meta name="description" content="Welcome">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>404 | GEB</title>
+    <title>配置及美化教程 | GEB</title>
     <link rel="icon" type="image/png" href="/111.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -257,12 +257,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/8.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">404</h1>
+                    <h1 class="description center-align post-title">配置及美化教程</h1>
                 </div>
             </div>
         </div>
@@ -390,7 +390,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-09-10
+                    2021-09-11
                 </div>
                 
 
@@ -411,9 +411,56 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>type: “404” </p>
-<p>layout: “404”</p>
-<p> description: “你访问的页面被外星人叼走了 :(“</p>
+                <p>#前言</p>
+<p>  内容可以说是完全复制于他人，基本过程是便应用到自己博客建设上边复制，只是作为个人认为最易操作的综述。CSDN博主<a target="_blank" rel="noopener" href="https://blog.csdn.net/victoryxa">Yafine</a>《hexo+Github博客搭建》三篇可谓博大精深，强烈推荐。</p>
+<p>[TOC]</p>
+<h1 id="一、配置篇"><a href="#一、配置篇" class="headerlink" title="一、配置篇"></a>一、配置篇</h1><p>1、</p>
+<h1 id="二、GIt基本指令及错误处理"><a href="#二、GIt基本指令及错误处理" class="headerlink" title="二、GIt基本指令及错误处理"></a>二、GIt基本指令及错误处理</h1><p>首先明确， 在GIT环境中，Ctrl+ins  复制  、Shift+ins 粘贴、Ctrl+C中断进程。（额外知识：笔记本中Fn+F1等，才能调用上部的F快捷键。）</p>
+<p>(1)基本指令</p>
+<p>1、hexo clean 或hexo cl  清理缓存，出现错误先用它。</p>
+<p>2、hexo g     更新内容</p>
+<p>3、hexo s     启动本地服务器，预览。默认地址： <a target="_blank" rel="noopener" href="http://localhost:4000/%E3%80%82">http://localhost:4000/。</a></p>
+<ul>
+<li><p>预览过程中要始终保持后台开启，否则网站就无法链接。</p>
+</li>
+<li><p>预览的同时可以修改文章内容或主题代码，保存后刷新页面即可。</p>
+</li>
+<li><p>对 站点配置<code>_config.yml</code> 的修改，需要重启本地服务器后才能预览效果。</p>
+</li>
+</ul>
+<p>4、hexo d     部署设定到仓库</p>
+<p>综上，hexo clean &amp;&amp; hexo g &amp;&amp; hexo s，可一条龙服务。</p>
+<p>（2）内容创建</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo <span class="keyword">new</span> <span class="string">&quot;新文章&quot;</span></span><br><span class="line">hexo <span class="keyword">new</span>  draft <span class="string">&quot;草稿文章&quot;</span></span><br><span class="line">hexo <span class="keyword">new</span> page</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>不加引号也可以。</li>
+<li><code>hexo new page</code> 创建一个文件夹，亦即新网页。</li>
+<li>draft 为草稿文档，不会展现在博客上，可用<code>hexo publish &quot;草稿文章&quot;</code> 发布成正式文章。</li>
+<li>预览草稿文章 <code>hexo s --drafts</code>。</li>
+</ul>
+<h1 id="三、typora基本"><a href="#三、typora基本" class="headerlink" title="三、typora基本"></a>三、typora基本</h1><h1 id="四、美化篇"><a href="#四、美化篇" class="headerlink" title="四、美化篇"></a>四、美化篇</h1><p>站点配置文件，主题配置文件。如在F盘新建博客文件夹，名称为blog，那么站点配置文件的路径为F:/blog/_config.yml，主题配置文件路径为F:/blog/themes/matery/_config.yml。</p>
+<p>1、修改主题的基本信息</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">#这是根目录下的配置文件信息</span><br><span class="line">title: 过客~励む   #这是网站标题</span><br><span class="line">subtitle: 励む    #这是网站副标题subtitle</span><br><span class="line"># 下面两个description,keywords，需要填上，如果想让搜索引擎收录，这个做SEO优化必不可忽视的两个属性</span><br><span class="line">description: 专注于Web,分享生活,分享知识  #网站描述</span><br><span class="line">keywords: [HTML, CSS, JavaScript, JQuery, React, Vue.js等]  #网站的关键词</span><br><span class="line">author: YangAir  #作者，文章版权所显示的</span><br><span class="line">language: zh-CN  #网站语言，不填写，默认为英文</span><br><span class="line">timezone:   #时区，可以不填写</span><br></pre></td></tr></table></figure>
+
+<p>2、[主题]修改主题的logo图和favicon图标  </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># 配置网站favicon和网站LOGO</span><br><span class="line">favicon: /favicon.png</span><br><span class="line">logo: /favicon.png</span><br></pre></td></tr></table></figure>
+
+<p>3、[主题]去掉右上角的github图标</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># Whether to display fork me on github icon and link, default true, You can change it to your repo address</span><br><span class="line"># 配置是否在 header 中显示 fork me on github 的图标，默认为true，你可以修改为你的仓库地址.</span><br><span class="line">githubLink:</span><br><span class="line">  enable: true</span><br><span class="line">  url: https://github.com/blinkfox/hexo-theme-matery</span><br><span class="line">  title: Fork Me</span><br></pre></td></tr></table></figure>
+
+<p>4、【主题】去掉主页的Github按钮</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># 首页 banner 中的第二个按钮的配置，包括按钮的显示名称、font awesome图标和按钮的超链接.</span><br><span class="line">indexbtn:</span><br><span class="line">  enable: true</span><br><span class="line">  name: Github</span><br><span class="line">  icon: fab fa-github-alt</span><br><span class="line">  url: https://github.com/blinkfox/hexo-theme-matery</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="2、动态-搞笑标题"><a href="#2、动态-搞笑标题" class="headerlink" title="2、动态/搞笑标题"></a>2、动态/搞笑标题</h3><p><code>themes/matery/layout/layout.ejs</code>文件中添加如下代码：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">    var OriginTitile=document.title,st;</span><br><span class="line">	document.addEventListener(&quot;visibilitychange&quot;,function()&#123;</span><br><span class="line">        document.hidden?(document.title=&quot;ヽ(●-`Д´-)ノ你要玩捉迷藏嘛&quot;,clearTimeout(st)):(document.title=&quot;(Ő∀Ő3)ノ好哦！&quot;,st=setTimeout(function()&#123;document.title=OriginTitile&#125;,3e3))</span><br><span class="line">    &#125;)</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="五、参考文章"><a href="#五、参考文章" class="headerlink" title="五、参考文章"></a>五、参考文章</h1><p>1、[美化] [CSDN] [Yafine]  <a target="_blank" rel="noopener" href="https://blog.csdn.net/victoryxa/article/details/105841309">Hexo+Github博客搭建之Matery主题个性化修改篇（一）</a></p>
+<p>2、[内容] [简书] [格物_志]   <a target="_blank" rel="noopener" href="https://www.jianshu.com/p/4235980d796a">Hexo 基本命令</a></p>
 
                 
             </div>
@@ -440,7 +487,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://geb233.github.io/2021/09/10/404/">https://geb233.github.io/2021/09/10/404/</a>
+                    <a href="https://geb233.github.io/2021/09/11/%E9%85%8D%E7%BD%AE%E5%8F%8A%E7%BE%8E%E5%8C%96%E5%85%A8%E6%95%99%E7%A8%8B/">https://geb233.github.io/2021/09/11/%E9%85%8D%E7%BD%AE%E5%8F%8A%E7%BE%8E%E5%8C%96%E5%85%A8%E6%95%99%E7%A8%8B/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -647,17 +694,18 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2021/09/10/%E7%9B%B4%E8%A8%80%E5%91%BD%E9%A2%98%E7%9A%84%E8%87%AA%E6%BC%94/">
+                <a href="/2021/09/11/%E9%85%8D%E7%BD%AE%E5%8F%8A%E7%BE%8E%E5%8C%96%E5%85%A8%E6%95%99%E7%A8%8B/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="直言命题的自演">
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="配置及美化教程">
                         
-                        <span class="card-title">直言命题的自演</span>
+                        <span class="card-title">配置及美化教程</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -667,9 +715,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-09-10
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-11
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -678,6 +726,7 @@
                         </span>
                     </div>
                 </div>
+
                 
             </div>
         </div>
@@ -688,13 +737,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/09/10/%E5%8F%B3%E5%87%BB/">
+                <a href="/2021/09/10/%E7%9B%B4%E8%A8%80%E5%91%BD%E9%A2%98%E7%9A%84%E8%87%AA%E6%BC%94/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="右击">
+                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="直言命题的自演">
                         
-                        <span class="card-title">右击</span>
+                        <span class="card-title">直言命题的自演</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
