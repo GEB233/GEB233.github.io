@@ -31,6 +31,9 @@
 
 <meta name="generator" content="Hexo 5.4.0"><!-- hexo-inject:begin --><!-- hexo-inject:end --><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
 <link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+  <!-- 今日诗词特效 -->
+  <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+
 
 
 
@@ -718,6 +721,16 @@ indexbtn:
     height: 15px;
 &#125;
 </code></pre>
+<h4 id="4-2-8、添加动态诗词"><a href="#4-2-8、添加动态诗词" class="headerlink" title="4.2.8、添加动态诗词"></a>4.2.8、添加动态诗词</h4><p>参考：<a target="_blank" rel="noopener" href="https://blog.csdn.net/victoryxa/article/details/105841309">https://blog.csdn.net/victoryxa/article/details/105841309</a></p>
+<p>目录 Blog\themes\matery\layout_partial\bg-cover-content.ejs下修改代码”</p>
+<pre><code>&lt;!-- &lt;%= config.description %&gt; --&gt;变为
+&lt;%- &#39;&lt;span id=&quot;jinrishici-sentence&quot;&gt;正在加载今日诗词....&lt;/span&gt;&#39; %&gt;
+</code></pre>
+<p>目录 ：Blog\themes\matery\layout_partial\head.ejs下新增代码”</p>
+<pre><code>  &lt;!-- 今日诗词特效 --&gt;
+    &lt;script src=&quot;https://sdk.jinrishici.com/v2/browser/jinrishici.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+</code></pre>
+<p>最后要将目录：Blog\themes\matery_config.yml 文件下主题的subtitle值改为<code>false</code></p>
 <h2 id="五、参考文章"><a href="#五、参考文章" class="headerlink" title="五、参考文章"></a>五、参考文章</h2><p>1、[美化] [CSDN] [Yafine]  <a target="_blank" rel="noopener" href="https://blog.csdn.net/victoryxa/article/details/105841309">Hexo+Github博客搭建之Matery主题个性化修改篇（一）</a></p>
 <p>2、[内容] [简书] [格物_志]   <a target="_blank" rel="noopener" href="https://www.jianshu.com/p/4235980d796a">Hexo 基本命令</a></p>
 
