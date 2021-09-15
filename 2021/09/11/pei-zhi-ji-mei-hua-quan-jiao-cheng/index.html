@@ -627,9 +627,13 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/hexo/">
+                                <span class="chip bg-color">hexo</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -662,7 +666,22 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>  内容可以说是完全复制于他人，基本过程是便应用到自己博客上边复制，只是作为个人认为的最易操作综述。还有就是，CSDN博主<a target="_blank" rel="noopener" href="https://blog.csdn.net/victoryxa">Yafine</a>《hexo+Github博客搭建》三篇可谓博大精深，强烈推荐。</p>
+                <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><pre><code>title: typora-vue-theme主题介绍
+date: 2018-09-07 09:25:00
+author: 赵奇
+img: /source/images/xxx.jpg
+top: true
+cover: true
+coverImg: /images/1.jpg
+password: 8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92
+toc: false
+mathjax: false
+summary: 这是你自定义的文章摘要内容，如果这个属性有值，文章卡片摘要就显示这段文字，否则程序会自动截取文章的部分内容作为摘要
+categories: Markdown
+tags:
+  - Typora
+  - Markdown
+</code></pre><p>  内容可以说是完全复制于他人，基本过程是便应用到自己博客上边复制，只是作为个人认为的最易操作综述。还有就是，CSDN博主<a target="_blank" rel="noopener" href="https://blog.csdn.net/victoryxa">Yafine</a>《hexo+Github博客搭建》三篇可谓博大精深，强烈推荐。</p>
 <h2 id="1-配置及错误处理"><a href="#1-配置及错误处理" class="headerlink" title="1 配置及错误处理"></a>1 配置及错误处理</h2><h3 id="1-1-配置"><a href="#1-1-配置" class="headerlink" title="1.1 配置"></a>1.1 配置</h3><p>一般的,npm类需要在博客文件夹内运行cmd，而博客部署在博客文件夹内运行GIt bash。比如：</p>
 <p><a target="_blank" rel="noopener" href="https://imgtu.com/i/hzTkfU"><img src="https://z3.ax1x.com/2021/09/11/hzTkfU.png" alt="" border="0" style="zoom:25%;" /></a></p>
 <p><a target="_blank" rel="noopener" href="https://imgtu.com/i/hzTEpF"><img src="https://z3.ax1x.com/2021/09/11/hzTEpF.jpg" alt="" border="0" style="zoom: 25%;" /></a></p>
@@ -708,8 +727,7 @@ hexo new page
 <p>（1）直接使用<strong>enter</strong>键来切换到下一个段落，如果一行的长度没有占完，而下一行还想保持在同一段的话可以使用<strong>shift+enter</strong>快捷键。</p>
 <p>（2）分割线可以使用<code>***</code>或者是 ‘—-‘再按下<strong>enter</strong>。</p>
 <p>详见：【简书】<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/783d30c98f56">Typora使用教程</a></p>
-<p>​            【少数派】<a target="_blank" rel="noopener" href="https://sspai.com/post/54912/">Typora 完全使用详解</a></p>
-<hr>
+<p>​            【少数派】<a target="_blank" rel="noopener" href="https://sspai.com/post/54912/">Typora 完全使用详解</a>    </p>
 <h2 id="4-美化篇"><a href="#4-美化篇" class="headerlink" title="4 美化篇"></a>4 美化篇</h2><p>时刻分清站点配置文件、主题配置文件。如在F盘新建博客文件夹，名称为blog，那么站点配置文件的路径F:/blog/_config.yml，主题配置文件路径F:/blog/themes/matery/_config.yml。<br>       代码没有的情况下可大胆添加，当然出错了还是要删掉。</p>
 <h3 id="4-1-站点配置"><a href="#4-1-站点配置" class="headerlink" title="4.1 站点配置"></a>4.1 站点配置</h3><h4 id="4-1-1-代码相关"><a href="#4-1-1-代码相关" class="headerlink" title="4.1.1 代码相关"></a>4.1.1 代码相关</h4><p>启用代码复制和高亮</p>
 <p>【cmd】下载配置</p>
@@ -840,7 +858,7 @@ mathjax: true
 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 </li>
 </ol>
-<h3 id="4-2-主题美化"><a href="#4-2-主题美化" class="headerlink" title="4.2 主题美化"></a>4.2 主题美化</h3><p>首先建议把作者<a target="_blank" rel="noopener" href="https://blinkfox.github.io/">闪烁之狐</a>教程过一遍、作者 <a target="_blank" rel="noopener" href="https://blinkfox.github.io/friends/">友链</a>是第二推荐。</p>
+<h4 id="4-1-5-插入加载页"><a href="#4-1-5-插入加载页" class="headerlink" title="4.1.5 插入加载页"></a>4.1.5 插入加载页</h4><h3 id="4-2-主题美化"><a href="#4-2-主题美化" class="headerlink" title="4.2 主题美化"></a>4.2 主题美化</h3><p>首先建议把作者<a target="_blank" rel="noopener" href="https://blinkfox.github.io/">闪烁之狐</a>教程过一遍、作者 <a target="_blank" rel="noopener" href="https://blinkfox.github.io/friends/">友链</a>是第二推荐。</p>
 <h4 id="4-2-1-主题基本信息"><a href="#4-2-1-主题基本信息" class="headerlink" title="4.2.1 主题基本信息"></a>4.2.1 主题基本信息</h4><pre><code>#这是根目录下的配置文件信息
 title: 过客~励む   #这是网站标题
 subtitle: 励む    #这是网站副标题subtitle
@@ -967,7 +985,11 @@ indexbtn:
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/hexo/">
+                                    <span class="chip bg-color">hexo</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -1676,6 +1698,8 @@ $(function () {
             document.hidden?(document.title="ヽ(●-`Д´-)ノ你要玩捉迷藏嘛",clearTimeout(st)):(document.title="(Ő∀Ő3)ノ好哦！",st=setTimeout(function(){document.title=OriginTitile},3e3))
         })
     </script>
+
+    
     
 
     <!--腾讯兔小巢-->
