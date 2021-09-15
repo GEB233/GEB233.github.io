@@ -522,9 +522,10 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>#命题结构分析</p>
-<p>  直言命题的断定有以下两种形式：</p>
-<p>（1）<br>$$<br>记为  \alpha i\beta<br>$$<br>​                     <a target="_blank" rel="noopener" href="https://imgtu.com/i/4EkC4J"><img src="https://z3.ax1x.com/2021/09/14/4EkC4J.jpg" alt="4EkC4J.jpg" border="0" style="zoom:25%;" /></a>                                         <a target="_blank" rel="noopener" href="https://imgtu.com/i/4EFzHU"><img src="https://z3.ax1x.com/2021/09/14/4EFzHU.jpg" alt="4EFzHU.jpg" border="0" style="zoom:25%;" /></a><a target="_blank" rel="noopener" href="https://imgtu.com/i/4Ek9N4"><img src="https://z3.ax1x.com/2021/09/14/4Ek9N4.jpg" alt="4Ek9N4.jpg" border="0" style="zoom:25%;" /></a>                     <a target="_blank" rel="noopener" href="https://imgtu.com/i/4EkpEF"><img src="https://z3.ax1x.com/2021/09/14/4EkpEF.jpg" alt="4EkpEF.jpg" border="0" style="zoom:25%;" /></a>                           <a target="_blank" rel="noopener" href="https://imgtu.com/i/4EFxBT"><img src="https://z3.ax1x.com/2021/09/14/4EFxBT.jpg" alt="4EFxBT.jpg" border="0" style="zoom:25%;" /></a></p>
+                <h1 id="命题结构分析"><a href="#命题结构分析" class="headerlink" title="命题结构分析"></a>命题结构分析</h1><p>  直言命题的断定有以下两种形式：</p>
+<p>（1）</p>
+<script type="math/tex; mode=display">
+记为  \alpha i\beta</script><p>​                   <a target="_blank" rel="noopener" href="https://imgtu.com/i/4Vrlaq"><img src="https://z3.ax1x.com/2021/09/15/4Vrlaq.png" alt="" border="0" /></a></p>
 <p>（2）记为α β <strong>i</strong>，其意为A: αβ2={α3β，α4β}             </p>
 <p>A: αβ2={3，4}                 所有α是β<br>         I: αβ4={2，3，4，5}     有些……是<br>        E: αβ1={1}                       所有……不是<br>        O: αβ3={1，2，5}          有些……不是</p>
 <p>可见第一种断定更精确，在两命题关系确定的情况下，若可导出第一类关系，应优先确定第一种。</p>
@@ -534,7 +535,18 @@
 <p>（3）αβ1=βα1、αβ4=βα4</p>
 <p>（4）不同命题相作用取其并集。</p>
 <p>定义关系为：</p>
-<p>$$<br>\left{ \begin{matrix}<br>{无交集\left{ \begin{matrix}<br>{互补：矛盾} \<br>{不互补：反对} \<br>\end{matrix} \right.} \<br>{子集\left{ \begin{matrix}<br>{相等：等价} \<br>{真子集：推出} \<br>\end{matrix} \right.} \<br>{相交：无关} \<br>\end{matrix} \right.<br>$$</p>
+<script type="math/tex; mode=display">
+\left\{ \begin{matrix}
+{无交集\left\{ \begin{matrix}
+{互补：矛盾} \\
+{不互补：反对} \\
+\end{matrix} \right.} \\
+{子集\left\{ \begin{matrix}
+{相等：等价} \\
+{真子集：推出} \\
+\end{matrix} \right.} \\
+{相交：无关} \\
+\end{matrix} \right.</script><div class="table-container">
 <table>
 <thead>
 <tr>
@@ -546,7 +558,8 @@
 <th>5</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>1</td>
 <td>无关</td>
 <td></td>
@@ -586,7 +599,9 @@
 <td></td>
 <td>无关</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <p>1、</p>
 
                 
@@ -1018,6 +1033,13 @@
 </main>
 
 
+<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
+    });
+</script>
+
 
 
     <footer class="page-footer bg-color">
@@ -1376,6 +1398,21 @@ $(function () {
     <script src="/libs/instantpage/instantpage.js" type="module"></script>
     
 
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/haruto.model.json"},"display":{"position":"left","width":150,"height":300},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script><!-- hexo-inject:begin --><!-- hexo-inject:end --></body>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/haruto.model.json"},"display":{"position":"left","width":150,"height":300},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
 
 </html>
