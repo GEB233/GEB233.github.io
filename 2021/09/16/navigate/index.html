@@ -4,7 +4,7 @@
 
 <head>
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
-    <meta name="keywords" content="配置及美化教程, GEB">
+    <meta name="keywords" content="navigate, GEB">
     <meta name="description" content="Welcome">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>配置及美化教程 | GEB</title>
+    <title>navigate | GEB</title>
     <link rel="icon" type="image/png" href="/111.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -508,12 +508,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/17.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">配置及美化教程</h1>
+                    <h1 class="description center-align post-title">navigate</h1>
                 </div>
             </div>
         </div>
@@ -645,7 +645,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-09-11
+                    2021-09-16
                 </div>
                 
 
@@ -666,263 +666,59 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><pre><code>title: typora-vue-theme主题介绍
-date: 2018-09-07 09:25:00
-author: 赵奇
-img: /source/images/xxx.jpg
-top: true
-cover: true
-coverImg: /images/1.jpg
-password: 8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92
-toc: false
-mathjax: false
-summary: 这是你自定义的文章摘要内容，如果这个属性有值，文章卡片摘要就显示这段文字，否则程序会自动截取文章的部分内容作为摘要
-categories: Markdown
-tags:
-  - Typora
-  - Markdown
-</code></pre><p>  内容可以说是完全复制于他人，基本过程是便应用到自己博客上边复制，只是作为个人认为的最易操作综述。还有就是，CSDN博主<a target="_blank" rel="noopener" href="https://blog.csdn.net/victoryxa">Yafine</a>《hexo+Github博客搭建》三篇可谓博大精深，强烈推荐。</p>
-<h2 id="1-配置及错误处理"><a href="#1-配置及错误处理" class="headerlink" title="1 配置及错误处理"></a>1 配置及错误处理</h2><h3 id="1-1-配置"><a href="#1-1-配置" class="headerlink" title="1.1 配置"></a>1.1 配置</h3><p>一般的,npm类需要在博客文件夹内运行cmd，而博客部署在博客文件夹内运行GIt bash。比如：</p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/hzTkfU"><img src="https://z3.ax1x.com/2021/09/11/hzTkfU.png" alt="" border="0" style="zoom:25%;" /></a></p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/hzTEpF"><img src="https://z3.ax1x.com/2021/09/11/hzTEpF.jpg" alt="" border="0" style="zoom: 25%;" /></a></p>
-<h3 id="1-2-常见错误"><a href="#1-2-常见错误" class="headerlink" title="1.2 常见错误"></a>1.2 常见错误</h3><p>错误1：超时。再次部署或连外网。</p>
-<p>错误2：错误类型10054。依次输入以下代码。clean后重新部署。</p>
-<pre><code>git config --global user.email 邮箱
-git config --global user.name 用户名
-</code></pre><p>错误3：代码编辑错误。出现大串代码错误，删除操作。</p>
-<hr>
-<h2 id="2-GIt基本指令"><a href="#2-GIt基本指令" class="headerlink" title="2 GIt基本指令"></a>2 GIt基本指令</h2><p>首先明确， 在GIT环境中，Ctrl+ins  复制  、Shift+ins 粘贴、Ctrl+C中断进程。（额外知识：笔记本中Fn+F1等，才能调用上部的F快捷键。）</p>
-<h3 id="2-1-基本指令"><a href="#2-1-基本指令" class="headerlink" title="2.1 基本指令"></a>2.1 基本指令</h3><p>1、<strong>hexo clean 或hexo cl</strong>  清理缓存，出现错误先用它。</p>
-<p>2、<strong>hexo g</strong>     更新内容</p>
-<p>3、<strong>hexo s</strong>     启动本地服务器，预览。默认地址： <a target="_blank" rel="noopener" href="http://localhost:4000/。">http://localhost:4000/。</a></p>
-<ul>
-<li><p>预览过程中要始终保持后台开启，否则网站就无法链接。</p>
-</li>
-<li><p>预览的同时可以修改文章内容或主题代码，保存后刷新页面即可。</p>
-</li>
-<li>对站点配置<code>_config.yml</code> 的修改，需要重启本地服务器后才能预览效果。</li>
-</ul>
-<p>4、<strong>hexo d</strong>     部署设定到仓库</p>
-<p>综上，<strong>hexo clean &amp;&amp; hexo g &amp;&amp; hexo s</strong>，可一条龙服务。</p>
-<h3 id="2-2-内容创建"><a href="#2-2-内容创建" class="headerlink" title="2.2 内容创建"></a>2.2 内容创建</h3><pre><code>hexo new &quot;新文章&quot;
-hexo new  draft &quot;草稿文章&quot;
-hexo new page
-</code></pre><ul>
-<li><p>不加引号也可以。</p>
-</li>
-<li><p><code>hexo new page</code> 创建一个文件夹，亦即新网页。</p>
-</li>
-<li><p>draft 为草稿文档，不会展现在博客上，可用<code>hexo publish &quot;草稿文章&quot;</code> 发布成正式文章。</p>
-</li>
-<li><p>预览草稿文章 <code>hexo s --drafts</code>。</p>
-<hr>
-</li>
-</ul>
-<h2 id="3-Typora基本"><a href="#3-Typora基本" class="headerlink" title="3 Typora基本"></a>3 Typora基本</h2><p>1、外部内容引用<br>含图片、链接、公式、音乐等。一般引用链接可采用先打名称后设置链接方式。</p>
-<p>2、目录格式</p>
-<p>本人实验结果为，在Matery主题中，一级目录二号标题，二级目录三号标题可正确适配。另外，建议启用首行缩进。</p>
-<p>3、代码</p>
-<p>一般新建代码框，复制进来就行，其他一点别动，否则网页不显示。建议启用快捷键。</p>
-<p>4、其它格式</p>
-<p>（1）直接使用<strong>enter</strong>键来切换到下一个段落，如果一行的长度没有占完，而下一行还想保持在同一段的话可以使用<strong>shift+enter</strong>快捷键。</p>
-<p>（2）分割线可以使用<code>***</code>或者是 ‘—-‘再按下<strong>enter</strong>。</p>
-<p>详见：【简书】<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/783d30c98f56">Typora使用教程</a></p>
-<p>​            【少数派】<a target="_blank" rel="noopener" href="https://sspai.com/post/54912/">Typora 完全使用详解</a>    </p>
-<h2 id="4-美化篇"><a href="#4-美化篇" class="headerlink" title="4 美化篇"></a>4 美化篇</h2><p>时刻分清站点配置文件、主题配置文件。如在F盘新建博客文件夹，名称为blog，那么站点配置文件的路径F:/blog/_config.yml，主题配置文件路径F:/blog/themes/matery/_config.yml。<br>       代码没有的情况下可大胆添加，当然出错了还是要删掉。</p>
-<h3 id="4-1-站点配置"><a href="#4-1-站点配置" class="headerlink" title="4.1 站点配置"></a>4.1 站点配置</h3><h4 id="4-1-1-代码相关"><a href="#4-1-1-代码相关" class="headerlink" title="4.1.1 代码相关"></a>4.1.1 代码相关</h4><p>启用代码复制和高亮</p>
-<p>【cmd】下载配置</p>
-<pre><code>npm i -S hexo-prism-plugin
-</code></pre><p>【站点】在站点配置文件config.yml中打开，插入以下代码，重新启动生成部署。</p>
-<pre><code>prism_plugin:
-  mode: &#39;preprocess&#39; # realtime/preprocess
-  theme: &#39;default&#39;
-  line_number: false # default false
-</code></pre><p>【站点】设置站点配置文件config.yml</p>
-<pre><code>highlight:
-  enable: false # 关闭原有的高亮代码
-</code></pre><p>【css】修改代码块</p>
-<p>打开<code>themes\source\css\matery.css</code>，修改代码块CSS样式如下,一般需添加</p>
-<pre><code>pre &#123;
-    padding: 1.5rem 1.5rem 1.5rem 3.3rem !important;
-    margin: 1rem 0 !important;
-    background: #272822;##代码框设置
-    overflow: auto;
-    border-radius: 0.35rem;
-    tab-size: 4;
-&#125;
-</code></pre><p>代码背景设置（文件位置同上）</p>
-<pre><code>pre code &#123;
-    padding: 0;
-    color: #111111;
-    background-color: #a1f7e4ce;##代码设置
-&#125;
-</code></pre><p> 代码块中的<code>&#123;&#125;</code>无法解析</p>
-<p>node_modules/hexo-prism-plugin/src/index.js文件中map里未支持大括号，需要在map中加上对应字符:</p>
-<pre><code>const map = &#123;
-  &#39;&amp;#39;&#39;: &#39;\&#39;&#39;,
-  &#39;&amp;amp;&#39;: &#39;&amp;&#39;,
-  &#39;&amp;gt;&#39;: &#39;&gt;&#39;,
-  &#39;&amp;lt;&#39;: &#39;&lt;&#39;,
-  &#39;&amp;quot;&#39;: &#39;&quot;&#39;,
-  &#39;&amp;#123;&#39;: &#39;&#123;&#39;,    //添加的代码
-  &#39;&amp;#125;&#39;: &#39;&#125;&#39;        //添加的代码
-&#125;;
-</code></pre><h4 id="4-1-2-二级菜单"><a href="#4-1-2-二级菜单" class="headerlink" title="4.1.2 二级菜单"></a>4.1.2 二级菜单</h4><p>如果你需要二级菜单则可以在原基本菜单导航的基础上如下操作</p>
-<ol>
-<li><p>在需要添加二级菜单的一级菜单下添加 <code>children</code> 关键字 (如:<code>About</code> 菜单下添加 <code>children</code>)</p>
-</li>
-<li><p>在 <code>children</code> 下创建二级菜单的 名称 name, 路径 url 和图标 icon.</p>
-</li>
-<li><p>注意每个二级菜单模块前要加 <code>-</code>.</p>
-</li>
-<li><p>注意缩进格式</p>
-<pre><code>menu:
-  Friends:
-    url: /friends
-    icon: fas fa-address-book
-  Medias:
-    icon: fas fa-list
-    children:
-      - name: Musics
-        url: /musics
-        icon: fas fa-music
-      - name: Movies
-        url: /movies
-        icon: fas fa-film
-      - name: Books
-        url: /books
-        icon: fas fa-book
-      - name: Galleries
-        url: /galleries
-        icon: fas fa-image
-</code></pre></li>
-</ol>
-<h4 id="4-1-3-插入自定义页面"><a href="#4-1-3-插入自定义页面" class="headerlink" title="4.1.3 插入自定义页面"></a>4.1.3 插入自定义页面</h4><p>任务为插入本地的html文件且不被hexo渲染。</p>
-<p>新建网站页</p>
-<pre><code>hexo new page ***
-</code></pre><p>将原.md文件后缀改为.html,用本地html文件替换，并在本地文件代码前加入以下代码，防止被渲染。</p>
-<pre><code>---
-layout: false
----
-</code></pre><h4 id="4-1-4-Latex公式渲染"><a href="#4-1-4-Latex公式渲染" class="headerlink" title="4.1.4 Latex公式渲染"></a>4.1.4 Latex公式渲染</h4><p>（1）Hexo添加mathjax</p>
-<ol>
-<li><p>如果hexo安装有<code>hexo-math</code>,需要先卸载它。卸载命令：</p>
-<pre class="line-numbers language-lang-bash"><code class="language-lang-bash">npm uninstall hexo-math --save
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-</li>
-<li><p>安装mathjax，安装命令：</p>
-<pre class="line-numbers language-lang-bash"><code class="language-lang-bash">npm install hexo-renderer-mathjax --save
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-</li>
-<li><p>hexo主题开启mathjax：</p>
-<p>进入主题目录，编辑<code>_config.yml</code>，开启mathjax：</p>
-<pre class="line-numbers language-lang-yaml"><code class="language-lang-yaml"># MathJax Support
-mathjax:
-  enable: true
-  per_page: true
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-</li>
-<li><p>hexo博客开启mathjax：</p>
-<p>博客文章的开头加入<code>mathjax:true</code>，具体如下：</p>
-<pre class="line-numbers language-lang-json"><code class="language-lang-json">---
-title: Hexo渲染LaTeX公式关键
-date: 2020-09-30 22:27:01
-mathjax: true
---
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-</li>
-</ol>
-<p>(2) hexo切换kramed引擎</p>
-<ol>
-<li><p>卸载marked引擎</p>
-<pre class="line-numbers language-lang-bash"><code class="language-lang-bash">npm uninstall hexo-renderer-marked --save
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-</li>
-<li><p>安装kramed引擎</p>
-<pre class="line-numbers language-lang-bash"><code class="language-lang-bash">npm install hexo-renderer-kramed --save
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-</li>
-<li><p>修改引擎bug</p>
-<p>修改文件<code>/node_modules\kramed\lib\rules\inline.js</code>中<code>escape</code>和<code>em</code>两行，具体修改如下：</p>
-<pre class="line-numbers language-lang-js"><code class="language-lang-js">//  escape: /^\\([\\`*{}\[\]()#$+\-.!_>])/,
-  escape: /^\\([`*\[\]()#$+\-.!_>])/,
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<blockquote>
-<p>这一步是在原基础上取消了对,{,}的转义(escape)。<br> 同时把第20行的em变量也要做相应的修改。</p>
-</blockquote>
-<pre class="line-numbers language-lang-js"><code class="language-lang-js">//  em: /^\b_((?:__|[\s\S])+?)_\b|^\*((?:\*\*|[\s\S])+?)\*(?!\*)/,
-  em: /^\*((?:\*\*|[\s\S])+?)\*(?!\*)/,
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<p>重新启动hexo:</p>
-<pre class="line-numbers language-lang-bash"><code class="language-lang-bash">hexo clean && hexo g -d
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-</li>
-</ol>
-<h4 id="4-1-5-插入加载页"><a href="#4-1-5-插入加载页" class="headerlink" title="4.1.5 插入加载页"></a>4.1.5 插入加载页</h4><h3 id="4-2-主题美化"><a href="#4-2-主题美化" class="headerlink" title="4.2 主题美化"></a>4.2 主题美化</h3><p>首先建议把作者<a target="_blank" rel="noopener" href="https://blinkfox.github.io/">闪烁之狐</a>教程过一遍、作者 <a target="_blank" rel="noopener" href="https://blinkfox.github.io/friends/">友链</a>是第二推荐。</p>
-<h4 id="4-2-1-主题基本信息"><a href="#4-2-1-主题基本信息" class="headerlink" title="4.2.1 主题基本信息"></a>4.2.1 主题基本信息</h4><pre><code>#这是根目录下的配置文件信息
-title: 过客~励む   #这是网站标题
-subtitle: 励む    #这是网站副标题subtitle
-# 下面两个description,keywords，需要填上，如果想让搜索引擎收录，这个做SEO优化必不可忽视的两个属性
-description: 专注于Web,分享生活,分享知识  #网站描述
-keywords: [HTML, CSS, JavaScript, JQuery, React, Vue.js等]  #网站的关键词
-author: YangAir  #作者，文章版权所显示的
-language: zh-CN  #网站语言，不填写，默认为英文
-timezone:   #时区，可以不填写
-</code></pre><h4 id="4-2-2-logo和favicon"><a href="#4-2-2-logo和favicon" class="headerlink" title="4.2.2 logo和favicon"></a>4.2.2 logo和favicon</h4><pre><code># 配置网站favicon和网站LOGO
-favicon: /favicon.png
-logo: /favicon.png
-</code></pre><h4 id="4-2-3-去掉Github图标"><a href="#4-2-3-去掉Github图标" class="headerlink" title="4.2.3 去掉Github图标"></a>4.2.3 去掉Github图标</h4><p>去掉右上角Github图标</p>
-<pre><code># Whether to display fork me on github icon and link, default true, You can change it to your repo address
-# 配置是否在 header 中显示 fork me on github 的图标，默认为true，你可以修改为你的仓库地址.
-githubLink:
-  enable: true
-  url: https://github.com/blinkfox/hexo-theme-matery
-  title: Fork Me
-</code></pre><p>去掉主页的Github按钮</p>
-<pre><code># 首页 banner 中的第二个按钮的配置，包括按钮的显示名称、font awesome图标和按钮的超链接.
-indexbtn:
-  enable: true
-  name: Github
-  icon: fab fa-github-alt
-  url: https://github.com/blinkfox/hexo-theme-matery
-</code></pre><h4 id="4-2-5-导航栏"><a href="#4-2-5-导航栏" class="headerlink" title="4.2.5 导航栏"></a>4.2.5 导航栏</h4><p>主要设置导航栏的颜色和透明效果。打开<code>themes/matery/source/css/matery.css</code>文件，大约在250行，有一个<code>.bg-color</code>属性，修改其属性值即可，代码如下：</p>
-<pre><code>.bg-color &#123;
-    background-image: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%); //修改成自己喜欢的颜色值
-    opacity: 0.8;  //透明效果 值范围 0~1，看情况自己修改
-&#125;
-</code></pre><h4 id="4-2-6-动态标题"><a href="#4-2-6-动态标题" class="headerlink" title="4.2.6 动态标题"></a>4.2.6 动态标题</h4><p><code>themes/matery/layout/layout.ejs</code>文件中添加如下代码：</p>
-<pre><code>&lt;script type=&quot;text/javascript&quot;&gt;
-    var OriginTitile=document.title,st;
-    document.addEventListener(&quot;visibilitychange&quot;,function()&#123;
-        document.hidden?(document.title=&quot;ヽ(●-`Д´-)ノ你要玩捉迷藏嘛&quot;,clearTimeout(st)):(document.title=&quot;(Ő∀Ő3)ノ好哦！&quot;,st=setTimeout(function()&#123;document.title=OriginTitile&#125;,3e3))
-    &#125;)
-&lt;/script&gt;
-</code></pre><h4 id="4-2-7-滑动条"><a href="#4-2-7-滑动条" class="headerlink" title="4.2.7 滑动条"></a>4.2.7 滑动条</h4><p>在<code>themes\Matery\source\css\matery.css</code>样式添加如下：</p>
-<pre><code>/* 滚动条 */
-::-webkit-scrollbar-thumb &#123;
-    background-color: #FF2A68;
-    background-image: -webkit-linear-gradient(45deg,rgba(255,255,255,.4) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.4) 50%,rgba(255,255,255,.4) 75%,transparent 75%,transparent);
-    border-radius: 3em;
-&#125;
-::-webkit-scrollbar-track &#123;
-    background-color: #ffcacaff;
-    border-radius: 3em;
-&#125;
-::-webkit-scrollbar &#123;
-    width: 8px;
-    height: 15px;
-&#125;
-</code></pre><h4 id="4-2-8-动态诗词"><a href="#4-2-8-动态诗词" class="headerlink" title="4.2.8 动态诗词"></a>4.2.8 动态诗词</h4><p>参考：<a target="_blank" rel="noopener" href="https://blog.csdn.net/victoryxa/article/details/105841309">https://blog.csdn.net/victoryxa/article/details/105841309</a></p>
-<p>目录 Blog\themes\matery\layout_partial\bg-cover-content.ejs下修改代码”</p>
-<pre><code>&lt;!-- &lt;%= config.description %&gt; --&gt;变为
-&lt;%- &#39;&lt;span id=&quot;jinrishici-sentence&quot;&gt;正在加载今日诗词....&lt;/span&gt;&#39; %&gt;
-</code></pre><p>目录 ：Blog\themes\matery\layout_partial\head.ejs下新增代码”</p>
-<pre><code>  &lt;!-- 今日诗词特效 --&gt;
-    &lt;script src=&quot;https://sdk.jinrishici.com/v2/browser/jinrishici.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
-</code></pre><p>最后要将目录：Blog\themes\matery_config.yml 文件下主题的subtitle值改为<code>false</code></p>
-<h2 id="5-参考文章"><a href="#5-参考文章" class="headerlink" title="5 参考文章"></a>5 参考文章</h2><p>1、[美化] [CSDN] [Yafine]  <a target="_blank" rel="noopener" href="https://blog.csdn.net/victoryxa/article/details/105841309">Hexo+Github博客搭建之Matery主题个性化修改篇（一）</a></p>
-<p>2、[内容] [简书] [格物_志]   <a target="_blank" rel="noopener" href="https://www.jianshu.com/p/4235980d796a">Hexo 基本命令</a></p>
-
+                <h2 id="1-一二级目录"><a href="#1-一二级目录" class="headerlink" title="1  一二级目录"></a>1  一二级目录</h2><p>修改如下格式代码</p>
+<pre><code>&lt;li&gt;&lt;a&gt;&lt;i class=&quot;linecons-lightbulb&quot;&gt;&lt;/i&gt; &lt;span class=&quot;title&quot;&gt;常用工具&lt;/span&gt;&lt;/a&gt;
+     &lt;ul&gt;
+         &lt;li&gt;&lt;a href=&quot;#速查手册&quot; class=&quot;smooth&quot;&gt;&lt;span class=&quot;title&quot;&gt;速查手册&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+         &lt;li&gt;&lt;a href=&quot;#参考资料&quot; class=&quot;smooth&quot;&gt;&lt;span class=&quot;title&quot;&gt;参考资料&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+         &lt;li&gt;&lt;a href=&quot;#图床工具&quot; class=&quot;smooth&quot;&gt;&lt;span class=&quot;title&quot;&gt;图床工具&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+         &lt;li&gt;&lt;a href=&quot;#主机域名&quot; class=&quot;smooth&quot;&gt;&lt;span class=&quot;title&quot;&gt;主机域名&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+     &lt;/ul&gt;
+ &lt;/li&gt;
+</code></pre><h2 id="2-二级目录框架"><a href="#2-二级目录框架" class="headerlink" title="2 二级目录框架"></a>2 二级目录框架</h2><pre><code>&lt;h4 class=&quot;text-gray&quot;&gt;&lt;i class=&quot;linecons-tag&quot; style=&quot;margin-right:7px&quot; id=&quot;设计素材&quot;&gt;&lt;/i&gt;设计素材&lt;/h4&gt;      ##以此开始一个新二级目录
+&lt;div class=&quot;row&quot;&gt;   ##以此开始新一行
+开始新二级目录后先新开一行
+</code></pre><h2 id="3-网址"><a href="#3-网址" class="headerlink" title="3 网址"></a>3 网址</h2><p>网址配置，一个完整单元</p>
+<p>修改网址、ico、标题、描述</p>
+<pre><code>&lt;div class=&quot;col-sm-3&quot;&gt;
+   &lt;div class=&quot;xe-widget xe-conversations box2 label-info&quot;
+         onclick=&#39;window.open(&quot;😊http://thestocks.im/😊&quot;,&quot;_blank&quot;)&#39; data-toggle=&quot;tooltip&quot;
+         data-placement=&quot;bottom&quot; data-original-title=&quot;thestocks.im&quot;&gt;
+         &lt;div class=&quot;xe-comment-entry&quot;&gt;&lt;a class=&quot;xe-user-img&quot;&gt;&lt;img                                          src=&quot;😊https://cdn.jsdelivr.net/gh/Yafine/cdn@3.2.1/source/box/images/
+                          logo/thestocks.png😊&quot;
+                     class=&quot;img-circle&quot; width=&quot;40&quot;&gt;&lt;/a&gt;
+            &lt;div class=&quot;xe-comment&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;xe-user-name overflowClip_1&quot;&gt;&lt;strong&gt;😊TheStocks😊&lt;/strong&gt;&lt;/a&gt;
+             &lt;p class=&quot;overflowClip_2&quot;&gt;😊对各大图片网站进行整合，免费优质图片下载😊&lt;/p&gt;
+          &lt;/div&gt;
+       &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre><p>一二级目录</p>
+<pre><code>&lt;li&gt;&lt;a&gt;&lt;i class=&quot;linecons-lightbulb&quot;&gt;&lt;/i&gt; &lt;span class=&quot;title&quot;&gt;常用工具&lt;/span&gt;&lt;/a&gt;
+                        &lt;ul&gt;
+                            &lt;li&gt;&lt;a href=&quot;#速查手册&quot; class=&quot;smooth&quot;&gt;&lt;span class=&quot;title&quot;&gt;速查手册&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#参考资料&quot; class=&quot;smooth&quot;&gt;&lt;span class=&quot;title&quot;&gt;参考资料&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#图床工具&quot; class=&quot;smooth&quot;&gt;&lt;span class=&quot;title&quot;&gt;图床工具&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#主机域名&quot; class=&quot;smooth&quot;&gt;&lt;span class=&quot;title&quot;&gt;主机域名&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/li&gt;
+</code></pre><p>添加或修改网址</p>
+<pre><code>               &lt;/div&gt;
+                &lt;div class=&quot;col-sm-3&quot;&gt;
+                    &lt;div class=&quot;xe-widget xe-conversations box2 label-info&quot;
+                        onclick=&#39;window.open(&quot;https://fontawesome.com/&quot;,&quot;_blank&quot;)&#39; data-toggle=&quot;tooltip&quot;
+                        data-placement=&quot;bottom&quot; data-original-title=&quot;fontawesome.com&quot;&gt;
+                        &lt;div class=&quot;xe-comment-entry&quot;&gt;&lt;a class=&quot;xe-user-img&quot;&gt;&lt;img
+                                    src=&quot;https://cdn.jsdelivr.net/gh/Yafine/cdn@3.2.1/source/box/images/logo/fontawesome.png&quot;
+                                    class=&quot;img-circle&quot; width=&quot;40&quot;&gt;&lt;/a&gt;
+                            &lt;div class=&quot;xe-comment&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;xe-user-name overflowClip_1&quot;&gt;&lt;strong&gt;Font
+                                        Awesome&lt;/strong&gt;&lt;/a&gt;
+                                &lt;p class=&quot;overflowClip_2&quot;&gt;一个基于CSS 和 LESS 的字体和图标工具包&lt;/p&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+</code></pre>
                 
             </div>
             <hr/>
@@ -948,7 +744,7 @@ indexbtn:
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://geb233.github.io/2021/09/11/pei-zhi-ji-mei-hua-quan-jiao-cheng/">https://geb233.github.io/2021/09/11/pei-zhi-ji-mei-hua-quan-jiao-cheng/</a>
+                    <a href="https://geb233.github.io/2021/09/16/navigate/">https://geb233.github.io/2021/09/16/navigate/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -1159,17 +955,18 @@ indexbtn:
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2021/09/11/bi-ye/">
+                <a href="/2021/09/16/navigate/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="毕业">
+                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="navigate">
                         
-                        <span class="card-title">毕业</span>
+                        <span class="card-title">navigate</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1179,9 +976,9 @@ indexbtn:
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-09-11
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-16
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -1189,6 +986,15 @@ indexbtn:
                             
                         </span>
                     </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/hexo/">
+                        <span class="chip bg-color">hexo</span>
+                    </a>
+                    
                 </div>
                 
             </div>
@@ -1200,13 +1006,13 @@ indexbtn:
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/09/10/zhi-yan-ming-ti-de-zi-yan/">
+                <a href="/2021/09/16/zhu-shi/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="直言命题的自演">
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="注释">
                         
-                        <span class="card-title">直言命题的自演</span>
+                        <span class="card-title">注释</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1217,7 +1023,7 @@ indexbtn:
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-10
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-16
                             </span>
                         <span class="publish-author">
                             
