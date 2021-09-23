@@ -729,7 +729,75 @@ hexo new page
 <p>详见：【简书】<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/783d30c98f56">Typora使用教程</a></p>
 <p>​            【少数派】<a target="_blank" rel="noopener" href="https://sspai.com/post/54912/">Typora 完全使用详解</a>    </p>
 <h2 id="4-美化篇"><a href="#4-美化篇" class="headerlink" title="4 美化篇"></a>4 美化篇</h2><p>时刻分清站点配置文件、主题配置文件。如在F盘新建博客文件夹，名称为blog，那么站点配置文件的路径F:/blog/_config.yml，主题配置文件路径F:/blog/themes/matery/_config.yml。<br>       代码没有的情况下可大胆添加，当然出错了还是要删掉。</p>
-<h3 id="4-1-站点配置"><a href="#4-1-站点配置" class="headerlink" title="4.1 站点配置"></a>4.1 站点配置</h3><h4 id="4-1-1-代码相关"><a href="#4-1-1-代码相关" class="headerlink" title="4.1.1 代码相关"></a>4.1.1 代码相关</h4><p>启用代码复制和高亮</p>
+<h3 id="4-0-加速"><a href="#4-0-加速" class="headerlink" title="4.0 加速"></a>4.0 加速</h3><h4 id="4-0-1-压缩"><a href="#4-0-1-压缩" class="headerlink" title="4.0.1 压缩"></a>4.0.1 压缩</h4><p>gulp 压缩一个可以自动压缩 HTML、JS、CSS 文件、图片，可以将 ES6 语法转换成 ES5，减少网络请求，同时降低网络负担</p>
+<p>首先全局安装 gulp</p>
+<pre><code>npm install --global gulp-cli
+</code></pre><p>安装压缩 HTML</p>
+<pre><code>npm install gulp-htmlclean --save-dev
+npm install --save gulp-html-minifier-terser
+</code></pre><p>安装压缩 CSS</p>
+<pre><code>npm install gulp-clean-css --save-dev
+</code></pre><p>安装压缩 JS</p>
+<p>这里我选择 gulp-uglify + gulp-babel，可以把 ES6 转换成 ES5，因为兼容所以选择</p>
+<pre><code>npm install --save-dev gulp-uglify
+npm install --save-dev gulp-babel @babel/core @babel/preset-env
+</code></pre><p>安装如上插件之后，在你的博客根目录创建一个 <code>gulpfile.js</code> 文件并把如下代码 <code>CV</code> 进去</p>
+<pre><code>var gulp = require(&#39;gulp&#39;);
+var cleanCSS = require(&#39;gulp-clean-css&#39;);
+var htmlmin = require(&#39;gulp-html-minifier-terser&#39;);
+var htmlclean = require(&#39;gulp-htmlclean&#39;);
+var uglify = require(&#39;gulp-uglify&#39;)
+var babel = require(&#39;gulp-babel&#39;)
+// 压缩js
+gulp.task(&#39;compress&#39;, () =&gt;
+  gulp.src([&#39;./public/**/*.js&#39;, &#39;!./public/**/*.min.js&#39;])
+    .pipe(babel(&#123;
+      presets: [&#39;@babel/preset-env&#39;]
+    &#125;))
+    .pipe(uglify().on(&#39;error&#39;, function (e) &#123;
+      console.log(e)
+    &#125;))
+    .pipe(gulp.dest(&#39;./public&#39;))
+)
+// 压缩css
+gulp.task(&#39;minify-css&#39;, () =&gt; &#123;
+    return gulp.src([&#39;./public/**/*.css&#39;])
+        .pipe(cleanCSS(&#123;
+            compatibility: &#39;ie11&#39;
+        &#125;))
+        .pipe(gulp.dest(&#39;./public&#39;));
+&#125;);
+// 压缩html
+gulp.task(&#39;minify-html&#39;, () =&gt; &#123;
+    return gulp.src(&#39;./public/**/*.html&#39;)
+        .pipe(htmlclean())
+        .pipe(htmlmin(&#123;
+            removeComments: true,       // 清除 html 注释
+            collapseWhitespace: true, // 压缩 html
+            collapseBooleanAttributes: true,
+            // 省略布尔属性的值，例如：&lt;input checked=&quot;true&quot;/&gt; ==&gt; &lt;input /&gt;
+            removeEmptyAttributes: true,
+            // 删除所有空格作属性值，例如：&lt;input id=&quot;&quot; /&gt; ==&gt; &lt;input /&gt;
+            removeScriptTypeAttributes: true,
+            // 删除&lt;script&gt;的type=&quot;text/javascript&quot;
+            removeStyleLinkTypeAttributes: true,
+            // 删除&lt;style&gt;和&lt;link&gt;的 type=&quot;text/css&quot;
+            minifyJS: true,     // 压缩页面 JS
+            minifyCSS: true,     // 压缩页面 CSS
+            minifyURLs: true     // 压缩页面 URL
+        &#125;))
+        .pipe(gulp.dest(&#39;./public&#39;))
+&#125;);
+
+// 运行gulp命令时依次执行以下任务
+gulp.task(&#39;default&#39;, gulp.parallel(
+  &#39;compress&#39;, &#39;minify-css&#39;, &#39;minify-html&#39;
+))
+</code></pre><p><strong>使用：</strong></p>
+<p>在 hexo g 之后运行 gulp 即可</p>
+<p>例如：</p>
+<pre><code>hexo cl &amp;&amp; hexo g &amp;&amp; gulp &amp;&amp; hexo d
+</code></pre><h3 id="4-1-站点配置"><a href="#4-1-站点配置" class="headerlink" title="4.1 站点配置"></a>4.1 站点配置</h3><h4 id="4-1-1-代码相关"><a href="#4-1-1-代码相关" class="headerlink" title="4.1.1 代码相关"></a>4.1.1 代码相关</h4><p>启用代码复制和高亮</p>
 <p>【cmd】下载配置</p>
 <pre><code>npm i -S hexo-prism-plugin
 </code></pre><p>【站点】在站点配置文件config.yml中打开，插入以下代码，重新启动生成部署。</p>
@@ -858,7 +926,8 @@ mathjax: true
 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 </li>
 </ol>
-<h4 id="4-1-5-插入加载页"><a href="#4-1-5-插入加载页" class="headerlink" title="4.1.5 插入加载页"></a>4.1.5 插入加载页</h4><h4 id="4-1-6-更改字体"><a href="#4-1-6-更改字体" class="headerlink" title="4.1.6 更改字体"></a>4.1.6 更改字体</h4><h3 id="全局字体自定义"><a href="#全局字体自定义" class="headerlink" title="全局字体自定义"></a>全局字体自定义</h3><ol>
+<h4 id="4-1-5-插入加载页"><a href="#4-1-5-插入加载页" class="headerlink" title="4.1.5 插入加载页"></a>4.1.5 插入加载页</h4><h4 id="4-1-6-更改字体"><a href="#4-1-6-更改字体" class="headerlink" title="4.1.6 更改字体"></a>4.1.6 更改字体</h4><p>全局字体自定义</p>
+<ol>
 <li><p>博客站点根目录下的 <code>source</code> 文件夹内创建一个名为 <code>font</code> 的文件夹，即文件夹路径为 <code>/source/font/</code> ，用来统一存放你要用到的字体。</p>
 </li>
 <li><p>将你要用到的字体放入上述创建的文件夹内，字体名称最好为英文，如 <code>/source/font/myFont.ttf</code></p>
@@ -1746,7 +1815,7 @@ $(function () {
             all[i].SourceElement().parentNode.className += ' has-jax';
     });
 </script>
-<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/haruto.model.json"},"display":{"position":"left","width":150,"height":300},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script><!-- hexo-inject:begin --><!-- hexo-inject:end --></body>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/haruto.model.json"},"display":{"position":"left","width":150,"height":300},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
 
 </html>
