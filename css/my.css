@@ -1,10 +1,1 @@
-/* Here is your custom css styles. */
-@font-face{
-    font-family: 'myFont';
-    src: url('../font/wuxia.ttf');
-}
-
-body{
-    font-family: 'myFont';
-}
-/*将上面的 myFont*/
+@font-face{font-family:myFont;src:url(../font/wuxia.ttf)}body{font-family:myFont}
