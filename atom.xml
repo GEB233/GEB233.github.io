@@ -6,7 +6,7 @@
   <link href="https://geb233.github.io/atom.xml" rel="self"/>
   
   <link href="https://geb233.github.io/"/>
-  <updated>2022-05-29T13:23:46.668Z</updated>
+  <updated>2022-05-29T16:03:18.576Z</updated>
   <id>https://geb233.github.io/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>文档格式互换</title>
+    <link href="https://geb233.github.io/posts/4e67bab1.html"/>
+    <id>https://geb233.github.io/posts/4e67bab1.html</id>
+    <published>2022-05-29T16:02:23.000Z</published>
+    <updated>2022-05-29T16:03:18.576Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    <category term="编程" scheme="https://geb233.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    
+    <category term="转换" scheme="https://geb233.github.io/tags/%E8%BD%AC%E6%8D%A2/"/>
+    
+  </entry>
   
   <entry>
     <title>曲线投影</title>

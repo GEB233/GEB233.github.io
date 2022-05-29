@@ -1219,9 +1219,6 @@ pre:hover::-webkit-scrollbar-thumb:hover,
 .toc-aside .toc-content .is-collapsible {
   padding-left: 15px;
 }
-.toc-aside .toc-content .toc-list li {
-  list-style: decimal;
-}
 .toc-aside .toc-content .toc-list-item a {
   transition: color 0.3s;
 }
