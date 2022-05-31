@@ -6,7 +6,7 @@
   <link href="https://geb233.github.io/atom.xml" rel="self"/>
   
   <link href="https://geb233.github.io/"/>
-  <updated>2022-05-30T00:55:23.488Z</updated>
+  <updated>2022-05-31T13:28:50.455Z</updated>
   <id>https://geb233.github.io/</id>
   
   <author>
@@ -17,13 +17,37 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>主题 Recommend</title>
+    <link href="https://geb233.github.io/posts/364afc49.html"/>
+    <id>https://geb233.github.io/posts/364afc49.html</id>
+    <published>2022-05-31T11:51:43.000Z</published>
+    <updated>2022-05-31T13:28:50.455Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>传统型</p><ul><li><p>matery</p><p>铺排式</p></li><li><p>sakura</p><p>中惯式</p></li><li><p>butterfly</p><p>侧文之冠</p><p>可玩性高。一则许多人用，二则改后看不出来原主题的风格。</p></li></ul><p>新世代</p><ul><li><a href="https://yuang01.gitee.io/">Bamboo</a>←matery</li><li><a href="https://yun.yunyoujun.cn/guide/">yun</a></li><li><a href="https://volantis.js.org/v5/getting-started/">Volantis</a></li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    <category term="hexo" scheme="https://geb233.github.io/categories/hexo/"/>
+    
+    
+    <category term="theme" scheme="https://geb233.github.io/tags/theme/"/>
+    
+  </entry>
+  
+  <entry>
     <title>文档格式互换</title>
     <link href="https://geb233.github.io/posts/4e67bab1.html"/>
     <id>https://geb233.github.io/posts/4e67bab1.html</id>
     <published>2022-05-29T16:02:23.000Z</published>
-    <updated>2022-05-30T00:55:23.488Z</updated>
+    <updated>2022-05-31T11:36:41.249Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="转换内容"><strong>转换内容</strong></h2><p>大量文本，一定量表格，图像，公式</p><p><strong>文本特点</strong></p><table><thead><tr class="header"><th>pdf</th><th>阅读</th><th>最适合阅读</th></tr></thead><tbody><tr class="odd"><td>word</td><td>编辑</td><td>实现格式最简单。</td></tr><tr class="even"><td>md</td><td>简美</td><td>移植性强，博客便签。</td></tr><tr class="odd"><td>html</td><td>非编辑</td><td>除pdf外，化归进行翻译。</td></tr><tr class="even"><td>latex</td><td>非编辑</td><td>公式语法最强。</td></tr><tr class="odd"><td>nb,mlx,ipynb</td><td>特化</td><td>阅读且执行代码时最佳。</td></tr></tbody></table><h2 id="转换方式"><strong>转换方式</strong></h2><p>Pandoc：(html，tex，doc，md)互转</p><p>Quicker：（md，jupyter）互转，(html md)</p><p>Typora： (md，doc，tex) (md，pdf，html，doc，tex)</p><p>Edge： (tex) (pdf)，(pdf) (doc，html)</p><p>ABBYY：pdf OCR ，微编辑</p><p>Word： (doc) (pdf，html)</p><p>Matlab：(mlx) (pdf，html，latex，word)</p><p>MMA： (nb) (pdf，html，latex)</p><p>VS code: (ipynb) (pdf，html)</p><h2 id="转换效果"><strong>转换效果</strong></h2><p>绿：所有情况，完美转换。</p><p>黄：有损。丢失特殊格式、图片、表格，公式及字符乱码。</p><p><a href="https://imgtu.com/i/XQO9k6"><img src="https://s1.ax1x.com/2022/05/30/XQO9k6.png" class="lazyload placeholder" data-srcset="https://s1.ax1x.com/2022/05/30/XQO9k6.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="XQO9k6.png" border="0"></a></p>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="row">    <embed src="1.pdf" width="100%" height="550" type="application/pdf"></div><h2 id="转换内容"><strong>转换内容</strong></h2><p>大量文本，一定量表格，图像，公式</p><p><strong>文本特点</strong></p><table><tbody><tr class="odd"><td>pdf</td><td>阅读</td><td>最适合阅读</td></tr><tr class="even"><td>word</td><td>编辑</td><td>实现格式最简单。</td></tr><tr class="odd"><td>md</td><td>简美</td><td>移植性强，博客便签。</td></tr><tr class="even"><td>html</td><td>非编辑</td><td>除pdf外，化归进行翻译。</td></tr><tr class="odd"><td>latex</td><td>非编辑</td><td>公式语法最强。</td></tr><tr class="even"><td>nb,mlx,ipynb</td><td>特化</td><td>阅读兼执行代码时最佳。</td></tr></tbody></table><h2 id="转换方式"><strong>转换方式</strong></h2><p>Pandoc：(html，tex，doc，md)互转</p><p>Quicker：（md，jupyter）互转，(html md)</p><p>Typora： (md，doc，tex) (md，pdf，html，doc，tex)</p><p>Edge： (tex) (pdf)，(pdf) (doc，html)</p><p>ABBYY：pdf OCR ，微编辑</p><p>Word： (doc) (pdf，html)</p><p>Matlab：(mlx) (pdf，html，latex，word)</p><p>MMA： (nb) (pdf，html，latex)</p><p>VS code: (ipynb) (pdf，html)</p><h2 id="转换效果"><strong>转换效果</strong></h2><p>绿：所有情况，完美转换。</p><p>黄：有损。丢失特殊格式、图片、表格，公式及字符乱码。</p><p><a href="https://imgtu.com/i/XQO9k6"><img src="https://s1.ax1x.com/2022/05/30/XQO9k6.md.png" class="lazyload placeholder" data-srcset="https://s1.ax1x.com/2022/05/30/XQO9k6.md.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="XQO9k6.png" border="0"></a></p>]]></content>
     
     
       
@@ -213,9 +237,9 @@
     <link href="https://geb233.github.io/posts/5611.html"/>
     <id>https://geb233.github.io/posts/5611.html</id>
     <published>2022-05-26T07:25:02.000Z</published>
-    <updated>2022-05-29T11:24:31.158Z</updated>
+    <updated>2022-05-31T09:56:36.179Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>整理几种常用软件的文本标记格式，包括typora、jupyter、wolai。基本基于markdown语法，结合一些latex、html内容。</p><h1 id="篇章结构">1 篇章结构</h1><h2 id="换行">换行</h2><p>直接换行：Typora，wolai。单Enter有行距，换段。Shift+Enter无行距。</p><p>格式换行：jupyter，直接换行后显示为不换行内容。</p><ul><li>空格两次再换行</li><li>回车两次，换段/有行距。</li></ul><h2 id="转译字符">转译字符</h2><p>\ ，通用。</p><p>如'&amp;'ensp;，当直接输入被编译为空格，执行操作且不显示。因此使用<br></p><h2 id="首行缩进">首行缩进</h2><ul><li>手动空格几次。优：简单；缺，每次手敲，不好统一。</li><li>Tab两次。Typora、Wolai，优缺同上。</li><li>’&amp;‘emsp;中文空格编译符，使用时连续输入两次，也可用&amp;#8195。适于jupyter。</li><li>Html标签。’&lt;‘p style="text-indent:2em"&gt;内容&lt;/p&gt;。通用。</li></ul><h2 id="标题层次">标题层次</h2><ul><li>#,##,### 通用</li><li>Ctrl+1,2,3 Typora</li></ul><h2 id="区块引用">区块引用</h2><p>&gt;,&gt;&gt;,&gt;&gt;&gt;。样式如下</p><blockquote><p>一次引用</p><blockquote><p>二次引用</p><blockquote><p>三次引用</p></blockquote></blockquote></blockquote><h2 id="列表-表格">列表 表格</h2><ul><li>无序 ：*+空格</li></ul><ol type="1"><li>有序：1.+空格</li></ol><p><strong>列表</strong>：wolai,Typora均能可视化编辑表格。复制到Jupyter里。</p><h1 id="形式设计">2 形式设计</h1><h2 id="字符样式">字符样式</h2><ul><li>黑体加粗。Ctrl+B。**内容**。<strong>内容</strong></li><li>倾斜。*内容*。<em>内容</em></li><li>斜体加粗。***内容***。<strong><em>内容</em></strong></li><li>删除线。~~内容~~。<del>内容</del></li></ul><h2 id="颜色">颜色</h2><p><strong>文字颜色</strong></p><ul><li>可视化编辑。wolai，typora。</li><li>Html 标记。'&lt;'font color='red'&gt; 红色文本 通用</li></ul><p><strong>文字背景</strong></p><ul><li>可视化编辑。wolai，typora</li><li>'&lt;'mark&gt;黄色高亮。通用</li></ul><h1 id="插入公式">3 插入公式</h1><p>完全使用Latex语法</p><p><strong>行内公式：</strong>输入特殊字符，简单公式，上下标等</p><ul><li>$ 公式 $，统一</li><li>，wolai</li></ul><p><strong>整行公式：</strong>公式展示</p><ul><li>$$公式$$，统一</li><li>直接插入。typora。</li><li>，wolai。</li></ul><h1 id="插入链接">4 插入链接</h1><h2 id="插入链接-1">插入链接</h2><p><a href="#插入链接-1">插入链接</a>(https://www.runoob.com/markdown/md-link.html)</p><p><a href="https://www.runoob.com/markdown/md-link.html">插入链接</a></p><h2 id="插入图片">插入图片</h2><p><strong>引用图床</strong></p><p>![](http://static.runoob.com/images/runoob-logo.png)</p><p><img src="http://static.runoob.com/images/runoob-logo.png" class="lazyload placeholder" data-srcset="http://static.runoob.com/images/runoob-logo.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg"></p><p><strong>简单属性编辑</strong></p><p>'&lt;'img src="http://static.runoob.com/images/runoob-logo.png"width="50%"&gt;</p><p><img src="http://static.runoob.com/images/runoob-logo.png" class="lazyload placeholder" data-srcset="http://static.runoob.com/images/runoob-logo.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" width="50%"></p>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>整理几种常用软件的文本标记格式，包括typora、jupyter、wolai。基本基于markdown语法，结合一些latex、html内容。</p><h1 id="篇章结构">1 篇章结构</h1><h2 id="换行">换行</h2><p>直接换行：Typora，wolai。单Enter有行距，换段。Shift+Enter无行距。</p><p>格式换行：jupyter，直接换行后显示为不换行内容。</p><ul><li>空格两次再换行</li><li>回车两次，换段/有行距。</li></ul><h2 id="转译字符">转译字符</h2><p>\ ，通用。</p><p>如'&amp;'ensp;，当直接输入被编译为空格，执行操作且不显示。因此使用<br></p><h2 id="首行缩进">首行缩进</h2><ul><li>手动空格几次。优：简单；缺，每次手敲，不好统一。</li><li>Tab两次。Typora、Wolai，优缺同上。</li><li>’&amp;‘emsp;中文空格编译符，使用时连续输入两次，也可用&amp;#8195。适于jupyter。</li><li>Html标签。’&lt;‘p style="text-indent:2em"&gt;内容&lt;/p&gt;。通用。</li></ul><h2 id="标题层次">标题层次</h2><ul><li>#,##,### 通用</li><li>Ctrl+1,2,3 Typora</li></ul><h2 id="区块引用">区块引用</h2><p>&gt;,&gt;&gt;,&gt;&gt;&gt;。样式如下</p><blockquote><p>一次引用</p><blockquote><p>二次引用</p><blockquote><p>三次引用</p></blockquote></blockquote></blockquote><h2 id="列表-表格">列表 表格</h2><ul><li>无序 ：*+空格</li></ul><ol type="1"><li>有序：1.+空格</li></ol><p><strong>列表</strong>：wolai,Typora均能可视化编辑表格。复制到Jupyter里。</p><h1 id="形式设计">2 形式设计</h1><h2 id="字符样式">字符样式</h2><ul><li>黑体加粗。Ctrl+B。**内容**。<strong>内容</strong></li><li>倾斜。*内容*。<em>内容</em></li><li>斜体加粗。***内容***。<strong><em>内容</em></strong></li><li>删除线。~~内容~~。<del>内容</del></li></ul><h2 id="颜色">颜色</h2><p><strong>文字颜色</strong></p><ul><li>可视化编辑。wolai，typora。</li><li>Html 标记。'&lt;'font color='red'&gt; 红色文本 通用</li></ul><p><strong>文字背景</strong></p><ul><li>可视化编辑。wolai，typora</li><li>'&lt;'mark&gt;黄色高亮。通用</li></ul><h1 id="插入公式">3 插入公式</h1><p>完全使用Latex语法</p><p><strong>行内公式：</strong>输入特殊字符，简单公式，上下标等</p><ul><li>$ 公式 $，统一</li><li>，wolai</li></ul><p>※ 行内代码：`code`,效果如<code>code</code></p><p><strong>整行公式：</strong>公式展示</p><ul><li>$$公式$$，统一</li><li>直接插入。typora。</li><li>，wolai。</li></ul><h1 id="插入链接">4 插入链接</h1><h2 id="插入链接-1">插入链接</h2><p><a href="#插入链接-1">插入链接</a>(https://www.runoob.com/markdown/md-link.html)</p><p><a href="https://www.runoob.com/markdown/md-link.html">插入链接</a></p><h2 id="插入图片">插入图片</h2><p><strong>引用图床</strong></p><p>![](http://static.runoob.com/images/runoob-logo.png)</p><p><img src="http://static.runoob.com/images/runoob-logo.png" class="lazyload placeholder" data-srcset="http://static.runoob.com/images/runoob-logo.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg"></p><p><strong>简单属性编辑</strong></p><p>'&lt;'img src="http://static.runoob.com/images/runoob-logo.png"width="50%"&gt;</p><p><img src="http://static.runoob.com/images/runoob-logo.png" class="lazyload placeholder" data-srcset="http://static.runoob.com/images/runoob-logo.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" width="50%"></p>]]></content>
     
     
       
