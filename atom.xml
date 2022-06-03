@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>GEB</title>
   
-  <subtitle>？，！</subtitle>
+  <subtitle>studying……</subtitle>
   <link href="https://geb233.github.io/atom.xml" rel="self"/>
   
   <link href="https://geb233.github.io/"/>
@@ -133,30 +133,6 @@
     
     
     <category term="导航栏" scheme="https://geb233.github.io/tags/%E5%AF%BC%E8%88%AA%E6%A0%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>主题及布局</title>
-    <link href="https://geb233.github.io/posts/5420db07.html"/>
-    <id>https://geb233.github.io/posts/5420db07.html</id>
-    <published>2022-05-29T07:47:17.000Z</published>
-    <updated>2022-05-29T11:21:40.180Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>所有主题下的导航栏，分类均一致。换言之，主题是可更换皮肤，不影响站点架构。</p><h2 id="主题">主题：</h2><h3 id="上下式上导下文">上下式：上导下文</h3><p>​ matery</p><p>​ sakura</p><h3 id="两侧式左导右文">两侧式：左导右文</h3><p>​ butterfly</p><p>​ yun ：<a href="https://yun.yunyoujun.cn/guide/">使用指南 |Hexo-Theme-Yun (yunyoujun.cn)</a></p><h3 id="兼之">兼之：</h3><p>​ bamboo</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
-      
-    
-    
-    
-    <category term="hexo" scheme="https://geb233.github.io/categories/hexo/"/>
-    
-    
-    <category term="theme" scheme="https://geb233.github.io/tags/theme/"/>
     
   </entry>
   
