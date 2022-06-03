@@ -200,7 +200,7 @@
   </url>
   
   <url>
-    <loc>https://geb233.github.io/manage/tags/index.html</loc>
+    <loc>https://geb233.github.io/manage/census/index.html</loc>
     
     <lastmod>2021-06-13</lastmod>
     
@@ -209,7 +209,7 @@
   </url>
   
   <url>
-    <loc>https://geb233.github.io/manage/census/index.html</loc>
+    <loc>https://geb233.github.io/manage/tags/index.html</loc>
     
     <lastmod>2021-06-13</lastmod>
     
@@ -227,14 +227,14 @@
 
   
   <url>
-    <loc>https://geb233.github.io/tags/%E6%96%87%E6%A1%A3%E5%86%99%E6%B3%95/</loc>
+    <loc>https://geb233.github.io/tags/%E6%8F%92%E4%BB%B6%E5%8D%87%E7%BA%A7/</loc>
     <lastmod>2022-06-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://geb233.github.io/tags/%E6%8F%92%E4%BB%B6%E5%8D%87%E7%BA%A7/</loc>
+    <loc>https://geb233.github.io/tags/%E6%96%87%E6%A1%A3%E5%86%99%E6%B3%95/</loc>
     <lastmod>2022-06-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -262,14 +262,14 @@
   </url>
   
   <url>
-    <loc>https://geb233.github.io/tags/%E8%BD%AC%E6%8D%A2/</loc>
+    <loc>https://geb233.github.io/tags/%E5%AF%BC%E8%88%AA%E6%A0%8F/</loc>
     <lastmod>2022-06-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://geb233.github.io/tags/%E5%AF%BC%E8%88%AA%E6%A0%8F/</loc>
+    <loc>https://geb233.github.io/tags/%E9%80%BB%E8%BE%91/</loc>
     <lastmod>2022-06-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -290,13 +290,6 @@
   </url>
   
   <url>
-    <loc>https://geb233.github.io/tags/step-1/</loc>
-    <lastmod>2022-06-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://geb233.github.io/tags/%E8%8B%8F%E8%BD%BC/</loc>
     <lastmod>2022-06-03</lastmod>
     <changefreq>weekly</changefreq>
@@ -304,7 +297,14 @@
   </url>
   
   <url>
-    <loc>https://geb233.github.io/tags/%E9%80%BB%E8%BE%91/</loc>
+    <loc>https://geb233.github.io/tags/step-1/</loc>
+    <lastmod>2022-06-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://geb233.github.io/tags/%E8%BD%AC%E6%8D%A2/</loc>
     <lastmod>2022-06-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -334,14 +334,14 @@
   </url>
   
   <url>
-    <loc>https://geb233.github.io/categories/%E7%BC%96%E7%A8%8B/</loc>
+    <loc>https://geb233.github.io/categories/%E8%AF%97%E6%96%87/</loc>
     <lastmod>2022-06-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://geb233.github.io/categories/%E8%AF%97%E6%96%87/</loc>
+    <loc>https://geb233.github.io/categories/%E7%BC%96%E7%A8%8B/</loc>
     <lastmod>2022-06-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
