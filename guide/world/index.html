@@ -1,0 +1,364 @@
+<html lang="zh-CN" style="user-select: auto;">
+<head><title>简·航</title>
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1,maximum-scale=1" name="viewport">
+    <meta content="jsthon" name="author">
+    <meta content="一个极简的网址导航，聚合了多种搜索引擎，收录了各种常用网站。分类合理，内容齐全。处处细微，一切都是理所当然。简·航，至纯  至简。" name="description">
+    <meta content="简·航,导航,网址导航,导航网站,常用网站,常用网址,大学生导航,程序员导航,设计导航,学习导航" name="keywords">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="assets/img/common/icon_64.png" rel="shortcut icon" type="image/png">
+    <link href="assets/img/common/icon_512.png" rel="apple-touch-icon">
+    <script>window.ga = window.ga || function () {
+        (ga.q = ga.q || []).push(arguments)
+    }, ga.l = +new Date, ga("create", "UA-137784067-1", "auto"), ga("send", "pageview")</script>
+    <style type="text/css" abt="234"></style>
+    <script async="" src="https://www.google-analytics.com/analytics.js"></script>
+    <script>//remove 17173 video ad
+    doAdblock();
+
+    function doAdblock() {
+        (function () {
+            function A() {
+            }
+
+            A.prototype = {
+                rules: {
+                    '17173_in': {
+                        'find': /http:\/\/f\.v\.17173cdn\.com\/(\d+\/)?flash\/PreloaderFile(Customer)?\.swf/,
+                        'replace': "http://swf.adtchrome.com/17173_in_20150522.swf"
+                    },
+                    '17173_out': {
+                        'find': /http:\/\/f\.v\.17173cdn\.com\/(\d+\/)?flash\/PreloaderFileFirstpage\.swf/,
+                        'replace': "http://swf.adtchrome.com/17173_out_20150522.swf"
+                    },
+                    '17173_live': {
+                        'find': /http:\/\/f\.v\.17173cdn\.com\/(\d+\/)?flash\/Player_stream(_firstpage)?\.swf/,
+                        'replace': "http://swf.adtchrome.com/17173_stream_20150522.swf"
+                    },
+                    '17173_live_out': {
+                        'find': /http:\/\/f\.v\.17173cdn\.com\/(\d+\/)?flash\/Player_stream_(custom)?Out\.swf/,
+                        'replace': "http://swf.adtchrome.com/17173.out.Live.swf"
+                    }
+                },
+                _done: null,
+                get done() {
+                    if (!this._done) {
+                        this._done = new Array();
+                    }
+                    return this._done;
+                },
+                addAnimations: function () {
+                    var style = document.createElement('style');
+                    style.type = 'text/css';
+                    style.innerHTML = 'object,embed{\
+                -webkit-animation-duration:.001s;-webkit-animation-name:playerInserted;\
+                -ms-animation-duration:.001s;-ms-animation-name:playerInserted;\
+                -o-animation-duration:.001s;-o-animation-name:playerInserted;\
+                animation-duration:.001s;animation-name:playerInserted;}\
+                @-webkit-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}\
+                @-ms-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}\
+                @-o-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}\
+                @keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}';
+                    document.getElementsByTagName('head')[0].appendChild(style);
+                },
+                animationsHandler: function (e) {
+                    if (e.animationName === 'playerInserted') {
+                        this.replace(e.target);
+                    }
+                },
+                replace: function (elem) {
+                    if (this.done.indexOf(elem) != -1) return;
+                    this.done.push(elem);
+                    var player = elem.data || elem.src;
+                    if (!player) return;
+                    var i, find, replace = false;
+                    for (i in this.rules) {
+                        find = this.rules[i]['find'];
+                        if (find.test(player)) {
+                            replace = this.rules[i]['replace'];
+                            if ('function' === typeof this.rules[i]['preHandle']) {
+                                this.rules[i]['preHandle'].bind(this, elem, find, replace, player)();
+                            } else {
+                                this.reallyReplace.bind(this, elem, find, replace)();
+                            }
+                            break;
+                        }
+                    }
+                },
+                reallyReplace: function (elem, find, replace) {
+                    elem.data && (elem.data = elem.data.replace(find, replace)) || elem.src && ((elem.src = elem.src.replace(find, replace)) && (elem.style.display = 'block'));
+                    var b = elem.querySelector("param[name='movie']");
+                    this.reloadPlugin(elem);
+                },
+                reloadPlugin: function (elem) {
+                    var nextSibling = elem.nextSibling;
+                    var parentNode = elem.parentNode;
+                    parentNode.removeChild(elem);
+                    var newElem = elem.cloneNode(true);
+                    this.done.push(newElem);
+                    if (nextSibling) {
+                        parentNode.insertBefore(newElem, nextSibling);
+                    } else {
+                        parentNode.appendChild(newElem);
+                    }
+                },
+                init: function () {
+                    var handler = this.animationsHandler.bind(this);
+                    document.body.addEventListener('webkitAnimationStart', handler, false);
+                    document.body.addEventListener('msAnimationStart', handler, false);
+                    document.body.addEventListener('oAnimationStart', handler, false);
+                    document.body.addEventListener('animationstart', handler, false);
+                    this.addAnimations();
+                }
+            };
+            new A().init();
+        })();
+    }
+
+    //remove baidu search ad
+    if (document.URL.indexOf('www.baidu.com') >= 0) {
+        if (document && document.getElementsByTagName && document.getElementById && document.body) {
+            var aa = function () {
+                var all = document.body.querySelectorAll("#content_left div,#content_left table");
+                for (var i = 0; i < all.length; i++) {
+                    if (/display:\s?(table|block)\s!important/.test(all[i].getAttribute("style"))) {
+                        all[i].style.display = "none";
+                        all[i].style.visibility = 'hidden';
+                    }
+                }
+                all = document.body.querySelectorAll('.result.c-container[id="1"]');
+                //if(all.length == 1) return;
+                for (var i = 0; i < all.length; i++) {
+                    if (all[i].innerHTML && all[i].innerHTML.indexOf('广告') > -1) {
+                        all[i].style.display = "none";
+                        all[i].style.visibility = 'hidden';
+                    }
+                }
+            }
+            aa();
+            document.getElementById('wrapper_wrapper').addEventListener('DOMSubtreeModified', aa)
+        }
+        ;
+    }
+    //remove sohu video ad
+    if (document.URL.indexOf("tv.sohu.com") >= 0) {
+        if (document.cookie.indexOf("fee_status=true") == -1) {
+            document.cookie = 'fee_status=true'
+        }
+        ;
+    }
+    //remove 56.com video ad
+    if (document.URL.indexOf("56.com") >= 0) {
+        if (document.cookie.indexOf("fee_status=true") == -1) {
+            document.cookie = 'fee_status=true'
+        }
+        ;
+    }
+    //fore iqiyi enable html5 player function
+    if (document.URL.indexOf("iqiyi.com") >= 0) {
+        if (document.cookie.indexOf("player_forcedType=h5_VOD") == -1) {
+            document.cookie = 'player_forcedType=h5_VOD'
+            if (localStorage.reloadTime && Date.now() - parseInt(localStorage.reloadTime) < 60000) {
+                console.log('no reload')
+            } else {
+                location.reload()
+                localStorage.reloadTime = Date.now();
+            }
+        }
+    }
+    </script>
+    <style type="text/css">object, embed {
+        -webkit-animation-duration: .001s;
+        -webkit-animation-name: playerInserted;
+        -ms-animation-duration: .001s;
+        -ms-animation-name: playerInserted;
+        -o-animation-duration: .001s;
+        -o-animation-name: playerInserted;
+        animation-duration: .001s;
+        animation-name: playerInserted;
+    }
+
+    @-webkit-keyframes playerInserted {
+        from {
+            opacity: 0.99;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    @-ms-keyframes playerInserted {
+        from {
+            opacity: 0.99;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    @-o-keyframes playerInserted {
+        from {
+            opacity: 0.99;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    @keyframes playerInserted {
+        from {
+            opacity: 0.99;
+        }
+        to {
+            opacity: 1;
+        }
+    }</style>
+</head>
+<body >
+<nav id="site-nav" background="body">
+    <div class="float-left" id="nav-close"></div>
+    <ul class="float-right" id="menu">
+        <li><a href="/">首页</a></li>
+        <li><a href="contact.html">联系</a></li>
+        <li><a href="about.html">关于</a></li>
+    </ul>
+</nav>
+<div id="site-main">
+    <div id="main-overlay"></div>
+    <header id="site-header">
+        <div class="container">
+            <div class="float-left" id="header-logo"></div>
+            <div class="float-right" id="burger">
+                <div id="burger-icon"><span class="icon-bar top"></span><span class="icon-bar middle"></span><span
+                        class="icon-bar bottom"></span></div>
+            </div>
+        </div>
+    </header>
+    <div class="headline search-bar">
+        <div class="container">
+            <div class="headline-content">
+                <div class="search-tab">
+                    <span class="baidu active">百度</span>
+                    <span class="google">谷歌</span>
+                    <span class="bing">必应</span>
+                    <span class="image">图片</span>
+                    <span class="torrent">种子</span>
+                    <span class="scholar">学术</span>
+                    </div>
+                <form class="search-form" target="_blank" action="https://www.baidu.com/s"><input
+                        class="float-left search-keyword" type="search" autocomplete="off" autofocus="" name="word"
+                        placeholder="百度一下，你就知道"><input class="float-right" type="submit" value="搜索"></form>
+            </div>
+        </div>
+    </div>
+    <div class="works">
+        <div class="work-link" style="opacity: 0.1;">
+            <div class="container">
+                <div class="tab">
+                    <span class="common active">常用</span>
+                    <span class="amuse">娱乐</span>
+                    <span class="study">学习</span>
+                    <span class="life">生活</span>
+                    <span class="tech">技术</span>
+                    <span class="design">设计</span>
+                    <i class="fa fa-cog" id="setting-icon"></i>
+                </div>
+                <div class="info" >
+                    <ul>
+                        <li>热门</li>
+                        <li><a href="https://www.baidu.com/" target="_blank">百度</a></li>
+                        <li><a href="https://www.google.com/" target="_blank">谷歌</a></li>
+                        <li><a href="https://cn.bing.com/" target="_blank">必应</a></li>
+                        <li><a href="https://www.sogou.com/" target="_blank">搜狗</a></li>
+                        <li><a href="https://www.toutiao.com/" target="_blank">今日头条</a></li>
+                        <li><a href="https://jandan.net/" target="_blank">煎蛋</a></li>
+                        <li><a href="http://www.dgtle.com/" target="_blank">数字尾巴</a></li>
+                    </ul>
+                    <ul>
+                        <li>社交</li>
+                        <li><a href="https://www.weibo.com/" target="_blank">微博</a></li>
+                        <li><a href="https://tieba.baidu.com/" target="_blank">贴吧</a></li>
+                        <li><a href="https://www.zhihu.com/" target="_blank">知乎</a></li>
+                        <li><a href="https://www.douban.com/" target="_blank">豆瓣</a></li>
+                        <li><a href="https://www.v2ex.com/" target="_blank">V2EX</a></li>
+                        <li><a href="https://www.jianshu.com/" target="_blank">简书</a></li>
+                        <li><a href="https://twitter.com/" target="_blank">Twitter</a></li>
+                    </ul>
+                    <ul>
+                        <li>资讯</li>
+                        <li><a href="https://www.163.com/" target="_blank">网易</a></li>
+                        <li><a href="http://www.qq.com/" target="_blank">腾讯</a></li>
+                        <li><a href="http://www.sina.com.cn/" target="_blank">新浪</a></li>
+                        <li><a href="http://www.sohu.com/" target="_blank">搜狐</a></li>
+                        <li><a href="http://www.ifeng.com/" target="_blank">凤凰网</a></li>
+                        <li><a href="http://www.people.com.cn/" target="_blank">人民网</a></li>
+                        <li><a href="http://xinhuanet.com/" target="_blank">新华网</a></li>
+                    </ul>
+                    <ul>
+                        <li>购物</li>
+                        <li><a href="https://www.taobao.com/" target="_blank">淘宝</a></li>
+                        <li><a href="https://www.jd.com/" target="_blank">京东</a></li>
+                        <li><a href="https://www.amazon.cn/" target="_blank">亚马逊</a></li>
+                        <li><a href="https://www.suning.com/" target="_blank">苏宁易购</a></li>
+                        <li><a href="https://you.163.com/" target="_blank">网易严选</a></li>
+                        <li><a href="https://www.mi.com/" target="_blank">小米商城</a></li>
+                        <li><a href="https://www.smzdm.com/" target="_blank">什么值得买</a></li>
+                    </ul>
+                    <ul>
+                        <li>视频</li>
+                        <li><a href="https://www.youku.com/" target="_blank">优酷</a></li>
+                        <li><a href="https://www.iqiyi.com/" target="_blank">爱奇艺</a></li>
+                        <li><a href="https://v.qq.com/" target="_blank">腾讯视频</a></li>
+                        <li><a href="https://www.bilibili.com/" target="_blank">哔哩哔哩</a></li>
+                        <li><a href="https://www.youtube.com/" target="_blank">YouTube</a></li>
+                        <li><a href="https://www.douyu.com/" target="_blank">斗鱼直播</a></li>
+                        <li><a href="https://www.huya.com/" target="_blank">虎牙直播</a></li>
+                    </ul>
+                    <ul>
+                        <li>工作</li>
+                        <li><a href="https://cn.linkedin.com/" target="_blank">领英</a></li>
+                        <li><a href="https://www.lagou.com/" target="_blank">拉勾网</a></li>
+                        <li><a href="https://www.zhaopin.com/" target="_blank">智联招聘</a></li>
+                        <li><a href="https://www.51job.com/" target="_blank">前程无忧</a></li>
+                        <li><a href="http://www.yingjiesheng.com/" target="_blank">应届生</a></li>
+                        <li><a href="https://maimai.cn/" target="_blank">脉脉</a></li>
+                        <li><a href="https://www.v2ex.com/?tab=jobs" target="_blank">酷工作</a></li>
+                    </ul>
+                    <ul>
+                        <li>生活</li>
+                        <li><a href="https://www.meituan.com/" target="_blank">美团</a></li>
+                        <li><a href="https://www.dianping.com/" target="_blank">大众点评</a></li>
+                        <li><a href="https://www.ctrip.com/" target="_blank">携程</a></li>
+                        <li><a href="https://www.qunar.com/" target="_blank">去哪儿</a></li>
+                        <li><a href="https://www.alitrip.com/" target="_blank">飞猪</a></li>
+                        <li><a href="https://kyfw.12306.cn/otn/index/init" target="_blank">12306</a></li>
+                        <li><a href="https://www.mafengwo.cn/" target="_blank">马蜂窝</a></li>
+                    </ul>
+                    <ul>
+                        <li>便捷</li>
+                        <li><a href="https://fanyi.baidu.com/" target="_blank">词典翻译</a></li>
+                        <li><a href="http://www.weather.com.cn/live/" target="_blank">天气预报</a></li>
+                        <li><a href="https://www.kuaidi100.com/" target="_blank">快递查询</a></li>
+                        <li><a href="https://cn.office-converter.com/" target="_blank">在线转换</a></li>
+                        <li><a href="https://send.firefox.com/" target="_blank">临时网盘</a></li>
+                        <li><a href="https://wx.qq.com/" target="_blank">网页微信</a></li>
+                        <li><a href="https://mail.qq.com/" target="_blank">QQ邮箱</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="container">
+            <div class="copy">© <span id="current-year">2019</span>简·航</div>
+            <div class="social"><a href="/" target="_blank" class="social-link"><i
+                    class="fa fa-telegram"></i></a><a href="/" target="_blank" class="social-link"><i
+                    class="fa fa-home"></i></a></div>
+        </div>
+    </footer>
+</div>
+<script src="assets/scripts/main.js"></script>
+<script src="assets/scripts/index.js"></script>
+</body>
+</html>
