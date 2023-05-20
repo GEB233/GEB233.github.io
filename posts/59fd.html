@@ -1,0 +1,187 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="theme-color" content="#0078E7"><meta name="author" content="GEB"><meta name="copyright" content="GEB"><meta name="generator" content="Hexo 6.2.0"><meta name="theme" content="hexo-theme-yun"><title>数值近似 | GEB</title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@900&amp;display=swap" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/star-markdown-css@0.3.3/dist/yun/yun-markdown.min.css"><link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/prism-theme-vars/base.css"><script src="https://fastly.jsdelivr.net/npm/@unocss/runtime/mini.global.js"></script><script src="https://fastly.jsdelivr.net/npm/scrollreveal/dist/scrollreveal.min.js" defer></script><script>function initScrollReveal() {
+  [".post-card",".markdown-body img"].forEach((target)=> {
+    ScrollReveal().reveal(target);
+  })
+}
+document.addEventListener("DOMContentLoaded", initScrollReveal);
+document.addEventListener("pjax:success", initScrollReveal);
+</script><link rel="icon" type="image/svg+xml" href="/yun.svg"><link rel="mask-icon" href="/yun.svg" color="#0078E7"><link rel="preload" href="/css/hexo-theme-yun.css" as="style"><link rel="prefetch" href="/js/sidebar.js" as="script"><link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin><link rel="preconnect" href="https://fastly.jsdelivr.net/npm/" crossorigin><script id="yun-config">
+    window.Yun = {}
+    window.CONFIG = {"hostname":"geb233.github.io","root":"/","title":"云游君的小站","version":"1.10.2","mode":"auto","copycode":true,"page":{"isPost":true},"i18n":{"placeholder":"搜索...","empty":"找不到您查询的内容: ${query}","hits":"找到 ${hits} 条结果","hits_time":"找到 ${hits} 条结果（用时 ${time} 毫秒）"},"anonymous_image":"https://cdn.yunyoujun.cn/img/avatar/none.jpg","say":{"api":"https://el-bot-api.vercel.app/api/words/young"},"fireworks":{"colors":null},"vendors":{"darken":"https://fastly.jsdelivr.net/npm/darken@1.5.0"}};
+  </script><link rel="stylesheet" href="/css/hexo-theme-yun.css"><script src="/js/hexo-theme-yun.js" type="module"></script><link rel="alternate" href="/atom.xml" title="GEB" type="application/atom+xml"><meta name="description" content="1 分析基础 1.1 类似泰勒展开观点 ​ 泰勒展开为多项式展开，所利用的基本函数为多项式函数。由其形式所带来的启发是，做到函数的数值近似，应满足的条件为：  数值相等 一阶导数相等 二阶及高阶导数相等  对F(x),使用指定函数G(x)的伸缩平移来拟合。aG(x+b)+c \[ \left\{ \begin{matrix} {F\left( x_{0} \right) &#x3D; aG\left({x_">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数值近似">
+<meta property="og:url" content="https://geb233.github.io/posts/59fd.html">
+<meta property="og:site_name" content="GEB">
+<meta property="og:description" content="1 分析基础 1.1 类似泰勒展开观点 ​ 泰勒展开为多项式展开，所利用的基本函数为多项式函数。由其形式所带来的启发是，做到函数的数值近似，应满足的条件为：  数值相等 一阶导数相等 二阶及高阶导数相等  对F(x),使用指定函数G(x)的伸缩平移来拟合。aG(x+b)+c \[ \left\{ \begin{matrix} {F\left( x_{0} \right) &#x3D; aG\left({x_">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://secure2.wostatic.cn/static/kdfQVLtNHE3kEzVh6iJgiq/%E8%AF%AF%E5%B7%AE.png?auth_key=1640188114-hePSVbDdNbPEvm6iZxGmy3-0-8f19f3db7ff42213f19ea1bb90433bd1&amp;image_process=format,webp">
+<meta property="og:image" content="https://s4.ax1x.com/2021/12/18/TETrk9.jpg">
+<meta property="article:published_time" content="2021-12-18T03:31:28.000Z">
+<meta property="article:modified_time" content="2022-05-29T11:22:12.557Z">
+<meta property="article:author" content="GEB">
+<meta property="article:tag" content="分析">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://secure2.wostatic.cn/static/kdfQVLtNHE3kEzVh6iJgiq/%E8%AF%AF%E5%B7%AE.png?auth_key=1640188114-hePSVbDdNbPEvm6iZxGmy3-0-8f19f3db7ff42213f19ea1bb90433bd1&amp;image_process=format,webp"><script>(function() {
+  const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+  const setting = localStorage.getItem('darken-mode') || 'auto'
+  if (setting === 'dark' || (prefersDark && setting !== 'light'))
+    document.documentElement.classList.toggle('dark', true)
+})()</script>
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+</head><body><script src="https://code.iconify.design/2/2.1.1/iconify.min.js"></script><script>// Define global variable
+IconifyProviders = {
+  // Empty prefix: overwrite default API provider configuration
+  '': {
+    // Use custom API first, use Iconify public API as backup
+    resources: [
+        'https://api.iconify.design',
+    ],
+    // Wait for 1 second before switching API hosts
+    rotate: 1000,
+  },
+};</script><script defer src="https://fastly.jsdelivr.net/npm/animejs@latest"></script><script defer src="/js/ui/fireworks.js" type="module"></script><canvas class="fireworks"></canvas><div class="container"><a class="sidebar-toggle hty-icon-button" id="menu-btn"><div class="hamburger hamburger--spin" type="button"><span class="hamburger-box"><span class="hamburger-inner"></span></span></div></a><div class="sidebar-toggle sidebar-overlay"></div><aside class="sidebar"><script src="/js/sidebar.js" type="module"></script><ul class="sidebar-nav"><li class="sidebar-nav-item sidebar-nav-toc hty-icon-button sidebar-nav-active" data-target="post-toc-wrap" title="文章目录"><span class="icon iconify" data-icon="ri:list-ordered"></span></li><li class="sidebar-nav-item sidebar-nav-overview hty-icon-button" data-target="site-overview-wrap" title="站点概览"><span class="icon iconify" data-icon="ri:passport-line"></span></li></ul><div class="sidebar-panel" id="site-overview-wrap"><div class="site-info fix-top"><a class="site-author-avatar" href="/about/" title="GEB"><img width="96" loading="lazy" src="/yun.png" alt="GEB"></a><div class="site-author-name"><a href="/about/">GEB</a></div><span class="site-name">GEB</span><sub class="site-subtitle">studying……</sub><div class="site-description"></div></div><nav class="site-state"><a class="site-state-item hty-icon-button icon-home" href="/" title="首页"><span class="site-state-item-icon"><span class="icon iconify" data-icon="ri:home-4-line"></span></span></a><div class="site-state-item"><a href="/archives/" title="归档"><span class="site-state-item-icon"><span class="icon iconify" data-icon="ri:archive-line"></span></span><span class="site-state-item-count">19</span></a></div><div class="site-state-item"><a href="/manage/categories/" title="分类"><span class="site-state-item-icon"><span class="icon iconify" data-icon="ri:folder-2-line"></span></span><span class="site-state-item-count">6</span></a></div><div class="site-state-item"><a href="/manage/tags/" title="标签"><span class="site-state-item-icon"><span class="icon iconify" data-icon="ri:price-tag-3-line"></span></span><span class="site-state-item-count">17</span></a></div><a class="site-state-item hty-icon-button" target="_blank" rel="noopener" href="https://yun.yunyoujun.cn" title="文档"><span class="site-state-item-icon"><span class="icon iconify" data-icon="ri:settings-line"></span></span></a></nav><hr style="margin-bottom:0.5rem"><hr style="margin:0.5rem 1rem"><div class="links"><a class="links-item hty-icon-button" href="/links/" title="我的小伙伴们" style="color:dodgerblue"><span class="icon iconify" data-icon="ri:genderless-line"></span></a></div><br><a class="links-item hty-icon-button" id="toggle-mode-btn" href="javascript:;" title="Mode" style="color: #f1cb64"><span class="icon iconify" data-icon="ri:contrast-2-line"></span></a></div><div class="sidebar-panel sidebar-panel-active" id="post-toc-wrap"><div class="post-toc"><div class="post-toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%88%86%E6%9E%90%E5%9F%BA%E7%A1%80"><span class="toc-number">1.</span> <span class="toc-text">1 分析基础</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%B1%BB%E4%BC%BC%E6%B3%B0%E5%8B%92%E5%B1%95%E5%BC%80%E8%A7%82%E7%82%B9"><span class="toc-number">1.1.</span> <span class="toc-text">1.1 类似泰勒展开观点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%95%E5%BE%B7%E9%80%BC%E8%BF%91"><span class="toc-number">1.2.</span> <span class="toc-text">1.2帕德逼近</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%97%8B%E8%BD%AC"><span class="toc-number">1.3.</span> <span class="toc-text">1.3 旋转</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%9E%E4%BE%8B"><span class="toc-number">2.</span> <span class="toc-text">2 实例</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E8%88%AC%E5%BC%8F"><span class="toc-number">2.0.1.</span> <span class="toc-text">2.1 一般式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9D%E7%AD%89%E5%87%BD%E6%95%B0%E8%BF%91%E4%BC%BC"><span class="toc-number">2.0.2.</span> <span class="toc-text">2.2 初等函数近似</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8C%87%E6%95%B0%E5%87%BD%E6%95%B0%E8%BF%91%E4%BC%BC"><span class="toc-number">2.0.3.</span> <span class="toc-text">2.3 指数函数近似</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%A0%B9%E5%8F%B7%E6%8C%87%E6%95%B0"><span class="toc-number">2.0.3.1.</span> <span class="toc-text">2.3.1 根号指数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%A510%E4%B8%BA%E5%BA%95%E7%9A%84%E5%B9%82%E6%8C%87%E6%95%B0"><span class="toc-number">2.0.3.2.</span> <span class="toc-text">2.3.2 以10为底的幂指数</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%A3%E6%95%B0%E6%96%B9%E7%A8%8B"><span class="toc-number">2.0.4.</span> <span class="toc-text">2.4 代数方程</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%8C%E6%AC%A1%E6%96%B9%E7%A8%8B"><span class="toc-number">2.0.4.1.</span> <span class="toc-text">2.4.1 二次方程</span></a></li></ol></li></ol></li></ol></li></ol></div></div></div></aside><main class="sidebar-translate" id="content"><div id="post"><article class="hty-card post-block" itemscope itemtype="https://schema.org/Article" style="--smc-primary:#0078E7;"><link itemprop="mainEntityOfPage" href="https://geb233.github.io/posts/59fd.html"><span hidden itemprop="author" itemscope itemtype="https://schema.org/Person"><meta itemprop="name" content="GEB"><meta itemprop="description"></span><span hidden itemprop="publisher" itemscope itemtype="https://schema.org/Organization"><meta itemprop="name" content="GEB"></span><header class="post-header"><h1 class="post-title" itemprop="name headline">数值近似</h1><div class="post-meta"><div class="post-time"><span class="post-meta-item-icon"><span class="icon iconify" data-icon="ri:calendar-line"></span></span> <time title="创建时间：2021-12-18 11:31:28" itemprop="dateCreated datePublished" datetime="2021-12-18T11:31:28+08:00">2021-12-18</time><span class="post-meta-divider">-</span><span class="post-meta-item-icon"><span class="icon iconify" data-icon="ri:calendar-2-line"></span></span> <time title="修改时间：2022-05-29 19:22:12" itemprop="dateModified" datetime="2022-05-29T19:22:12+08:00">2022-05-29</time></div><div class="post-classify"><span class="post-category"> <span class="post-meta-item-icon" style="margin-right:3px;"><span class="icon iconify" data-icon="ri:folder-line"></span></span><span itemprop="about" itemscope itemtype="https://schema.org/Thing"><a class="category-item" href="/categories/%E6%95%B0%E5%AD%A6/" style="--text-color:var(--hty-text-color)" itemprop="url" rel="index"><span itemprop="text">数学</span></a></span></span><span class="post-tag"><span class="post-meta-divider">-</span><a class="tag-item" href="/tags/%E5%88%86%E6%9E%90/" style="--text-color:var(--hty-text-color)"><span class="post-meta-item-icon"><span class="icon iconify" data-icon="ri:price-tag-3-line"></span></span><span class="tag-name">分析</span></a></span></div></div></header><section class="post-body" itemprop="articleBody"><div class="post-content markdown-body"><h1 id="分析基础">1 分析基础</h1>
+<h2 id="类似泰勒展开观点">1.1 类似泰勒展开观点</h2>
+<p>​
+泰勒展开为多项式展开，所利用的基本函数为多项式函数。由其形式所带来的启发是，做到函数的数值近似，应满足的条件为：</p>
+<ul>
+<li><p>数值相等</p></li>
+<li><p>一阶导数相等</p></li>
+<li><p>二阶及高阶导数相等</p></li>
+</ul>
+<p>对F(x),使用指定函数G(x)的伸缩平移来拟合。aG(x+b)+c <span class="math display">\[
+\left\{ \begin{matrix}
+{F\left( x_{0} \right) = aG\left({x_{0} + b} \right) + C} \\
+{F^{'}\left( x_{0} \right) = aG^{'}\left({x_{0} + b} \right.})
+\\
+{F{''}\left( x_{0} \right) = aG{''}\left( x_{0} + b
+\right)} \\
+\end{matrix} \right.
+\]</span></p>
+<p><span class="math display">\[
+\mathbf{由}\frac{F^{''}\left( x_{0} \right)}{F^{'}\left(
+x_{0} \right)} = \frac{G^{''}\left( t \right)}{G^{'}\left( t
+\right)}~~,\mathbf{解得}t\hspace{25em}\\
+\mathbf{则}\left\{ \begin{matrix}
+{~b = t - x_{0}~~} \\
+{a = \frac{F^{'}\left( x_{0} \right)}{G^{'}\left( t \right)}} \\
+{c = F\left(x_{0} \right) - aG\left(t \right.} )\\
+\end{matrix} \right.
+\]</span></p>
+<p>因此 <span class="math display">\[
+F = F\left( x_{0} \right) + \frac{F^{'}\left( x_{0}
+\right)}{G^{'}\left( t \right)}\left( G\left( {x - x_{0} + t}
+\right) - G\left( t \right) \right)
+\]</span></p>
+<p><span class="math display">\[
+当G为反比例函数\frac{1}{x+1}时\hspace{25em}\\
+记~~~T=\frac{F^{'}(x_0)}{F^{''}(x_0)}~~~P=x-x_0\\
+则有F = F_{x_{0}} + \frac{2TP}{2T - P}F_{x_{0}}^{'}
+\]</span></p>
+<h2 id="帕德逼近">1.2帕德逼近</h2>
+<p><span class="math display">\[
+F=\frac{M\mathbf{次多项式}}{N\mathbf{次多项式}}\mathbf{\hspace{1em}逼近形式是唯一的}
+\]</span></p>
+<h2 id="旋转">1.3 旋转</h2>
+<p>1 轴对称点：在定区间内，视函数曲率最大值点为函数轴对称点。 <span class="math display">\[
+k = \frac{\left| f_{2} \right|}{\left\lbrack {1 + f_{1}^{2}}
+\right\rbrack^{\frac{3}{2}}} \Rightarrow  f_{3} =
+\frac{3f_{1}f_{2}^{2}}{1 + f_{1}^{2}}\\[5pt]
+\]</span>
+其中f<sub>1</sub>,f<sub>2</sub>,f<sub>3</sub>为函数的一二三阶导数,方程解即为函数轴对称点。</p>
+<p>2 变换
+设对称点处斜率k，则对称点到原点的<strong>等距旋转</strong>变换为： <span class="math display">\[
+\left\{ \begin{matrix} {x = \frac{ky^{'} - x'}{\sqrt{1 +
+k^{2}}}} \\[5pt] {y = \frac{kx^{'} + y'}{\sqrt{1 + k^{2}}}} \\
+\end{matrix} \right.
+\]</span> 上式作用，将（x,y）待入原函数，得到对称轴为y轴的新方程。</p>
+<p>一般的，旋转θ: <span class="math display">\[
+\begin{pmatrix}
+{x'} \\
+{y'} \\
+\end{pmatrix} = \begin{pmatrix}
+\begin{matrix}
+{cos\theta} &amp; {- sin\theta} \\
+\end{matrix} \\
+\begin{matrix}
+{sin\theta} &amp; {cos\theta} \\
+\end{matrix} \\
+\end{pmatrix}\begin{pmatrix}
+x \\
+y \\
+\end{pmatrix}
+\]</span></p>
+<h1 id="实例">2 实例</h1>
+<h3 id="一般式">2.1 一般式</h3>
+<p><span class="math display">\[
+m^{k} = \frac{\frac{m + 1}{m - 1} + k}{\frac{m + 1}{m - 1} - k}\\
+k~\epsilon\left\lbrack {- 1,1}
+\right\rbrack\mathbf{时，大致取~~~~}m\epsilon\left\lbrack 0.6,1.6
+\right\rbrack
+\]</span></p>
+<h3 id="初等函数近似">2.2 初等函数近似</h3>
+<p><span class="math display">\[
+lnx = \frac{2\left( x - x_{0} \right)}{x + x_{0}} +
+lnx_{0}\hspace{2em}\\
+~\\e^{x} = \left( \frac{2n + x}{2n - x} \right)^{n},n为计算次数\\
+对三角函数，令t=\frac{x}{\pi}:\hspace{26em}\\
+sinx = \frac{16}{\frac{5}{t\left( {1 - t} \right)} -
+4}~~~~~~~~~\left\lbrack {0,\pi} \right\rbrack\\
+~\\~~~~cosx = \frac{1 - 4t^{2}}{1 + t^{2}}~~~~~~~~~\left\lbrack -
+\frac{\pi}{2},\frac{\pi}{2} \right\rbrack\\~\\
+\hspace{5em}{\tan x } = \left\{ \begin{matrix}
+{\frac{3t}{1 - 4t^{2}}~~~~~\left\lbrack 0,\frac{\pi}{4} \right\rbrack}
+\hspace{6em}\\
+{\frac{1 + tanx}{1 - tanx }~~~\left\lbrack {\frac{\pi}{4},\frac{\pi}{2}}
+\right\rbrack 化归前一区间} \\
+\end{matrix} \right.\\
+\left. cosx = k~\Longleftrightarrow~\frac{x}{\pi} = \sqrt{\frac{1 - k}{4
++ k}} \right.
+\]</span></p>
+<h3 id="指数函数近似">2.3 指数函数近似</h3>
+<h4 id="根号指数">2.3.1 根号指数</h4>
+<p><span class="math display">\[
+\sqrt[n]{a^{n} + b} \geq a + \frac{2ab}{2na^{n} + \left( {n - 1}
+\right)b}~~~~~b &gt; 0
+\]</span></p>
+<p>​ 定义误差值 <span class="math display">\[
+\Delta = 真值 - 估值\\
+b_{max} = \left( {a + 1} \right)^{n} - a^{n}\\
+\Delta_{max} = \Delta_{b_{max}} = 1 - \frac{2a}{\frac{2na^{n}}{\left( {a
++ 1} \right)^{n} - a^{n}} + \left( n - 1 \right)}
+\]</span> ​ 给出误差限 <span class="math display">\[
+\Delta \leq \frac{b}{b_{max}}\Delta_{max}\\
+令t=\frac{2a}{n-1}\\
+\Delta_{max}\leq\frac{1}{t^2+t+1}\leq\frac{1}{(t+\frac{1}{2})^2}\leq\frac{1}{t(t+1)}\leq(\frac{n-1}{2a})^2_{(t\geq4时,差值小)}
+\]</span> ​ 常用近似式 <span class="math display">\[
+\sqrt{a^{2} + b} = a + \frac{2ab}{4a^{2} + b}~~~,~~~\Delta &lt;
+\frac{b}{2a\left( {2a + 1} \right)^{2}}\\
+\sqrt[3]{a^{3} + b} = a + \frac{ab}{3a^{3} + b}~~~~,~~~\Delta &lt;
+\frac{b}{4a^{2}\left( {a + 1} \right)^{2}}
+\]</span></p>
+<h4 id="以10为底的幂指数">2.3.2 以10为底的幂指数</h4>
+<p><span class="math display">\[
+10^{x} = \frac{9 + \left( {5 + 4x} \right)^{2}}{9 + \left( {5 - 4x}
+\right)^{2}}
+\]</span></p>
+<p><img src="https://secure2.wostatic.cn/static/kdfQVLtNHE3kEzVh6iJgiq/%E8%AF%AF%E5%B7%AE.png?auth_key=1640188114-hePSVbDdNbPEvm6iZxGmy3-0-8f19f3db7ff42213f19ea1bb90433bd1&amp;image_process=format,webp" class="lazyload placeholder" data-srcset="https://secure2.wostatic.cn/static/kdfQVLtNHE3kEzVh6iJgiq/%E8%AF%AF%E5%B7%AE.png?auth_key=1640188114-hePSVbDdNbPEvm6iZxGmy3-0-8f19f3db7ff42213f19ea1bb90433bd1&amp;image_process=format,webp" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg"></p>
+<h3 id="代数方程">2.4 代数方程</h3>
+<h4 id="二次方程">2.4.1 二次方程</h4>
+<p><span class="math display">\[
+ax^{2} + bx + c = 0\\
+~真值~x，约值~x^{*}，记t = \left| \frac{b^{2}}{4ac} \right|~
+\]</span> 则近似解为： <span class="math display">\[
+x^{*} = \frac{bc}{ac - b^{2}}
+\]</span> 且约值为真值中绝对值小的根的近似(靠近0)</p>
+<p>误差估计： <span class="math display">\[
+\left\{ {\begin{matrix}
+{~~~~~~~~~t \geq 1~~~~\left| \frac{x^{*}}{x} \right| \geq
+\frac{2}{3}\hspace{12em}} \\
+{0 &lt; t &lt; 1~~~~\left| \frac{x^{*}}{x} \right| \geq 0.84 + \frac{t -
+0.3}{5t + 0.3}\hspace{6.9em}} \\
+{t \geq 1~~~~\left| \frac{x^{*}}{x} \right| \geq 0.84 + \frac{\left(t -
+0.9)\right. - 0.3}{5\left(t - 0.9)\right. + 0.3}~~~~~~~~~~~~} \\
+\end{matrix}~~} \right.
+\]</span> #### 2.4.2 三次方程</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/TETrk9"><img src="https://s4.ax1x.com/2021/12/18/TETrk9.jpg" class="lazyload placeholder" data-srcset="https://s4.ax1x.com/2021/12/18/TETrk9.jpg" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" style="zoom:50%;"></a></p>
+</div></section><div id="reward-container"><span class="hty-icon-button button-glow" id="reward-button" title="打赏" onclick="var qr = document.getElementById(&quot;qr&quot;); qr.style.display = (qr.style.display === &quot;none&quot;) ? &quot;block&quot; : &quot;none&quot;;"><span class="icon iconify" data-icon="ri:hand-coin-line"></span></span><div id="reward-comment">I'm so cute. Please give me money.</div></div><ul class="post-copyright"><li class="post-copyright-author"><strong>本文作者：</strong>GEB</li><li class="post-copyright-link"><strong>本文链接：</strong><a href="https://geb233.github.io/posts/59fd.html" title="数值近似">https://geb233.github.io/posts/59fd.html</a></li><li class="post-copyright-license"><strong>版权声明：</strong>本博客所有文章除特别声明外，均默认采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="noopener" title="CC BY-NC-SA 4.0 "><span class="icon iconify" data-icon="ri:creative-commons-line"></span><span class="icon iconify" data-icon="ri:creative-commons-by-line"></span><span class="icon iconify" data-icon="ri:creative-commons-nc-line"></span><span class="icon iconify" data-icon="ri:creative-commons-sa-line"></span></a> 许可协议。</li></ul></article><div class="post-nav"><div class="post-nav-item"><a class="post-nav-prev" href="/posts/11e6.html" rel="prev" title="西江月"><span class="icon iconify" data-icon="ri:arrow-left-s-line"></span><span class="post-nav-text">西江月</span></a></div><div class="post-nav-item"><a class="post-nav-next" href="/posts/9071.html" rel="next" title="桂枝香"><span class="post-nav-text">桂枝香</span><span class="icon iconify" data-icon="ri:arrow-right-s-line"></span></a></div></div></div><div class="hty-card" id="comment"></div></main><footer class="sidebar-translate" id="footer"><div class="copyright"><span>&copy; 2019 – 2023 </span><span class="with-love" id="animate"><span class="icon iconify" data-icon="ri:cloud-line"></span></span><span class="author"> GEB</span></div><div class="powered"><span>由 <a href="https://hexo.io" target="_blank" rel="noopener">Hexo</a> 驱动 v6.2.0</span><span class="footer-separator">|</span><span>主题 - <a rel="noopener" href="https://github.com/YunYouJun/hexo-theme-yun" target="_blank"><span>Yun</span></a> v1.10.2</span></div></footer></div><a class="hty-icon-button" id="back-to-top" aria-label="back-to-top" href="#"><span class="icon iconify" data-icon="ri:arrow-up-s-line"></span><svg class="progress-circle-container" viewBox="0 0 100 100"><circle class="progress-circle" id="progressCircle" cx="50" cy="50" r="48" fill="none" stroke="#0078E7" stroke-width="2" stroke-linecap="round"></circle></svg></a><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/haruto.model.json"},"display":{"position":"left","width":150,"height":300},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body></html>

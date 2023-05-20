@@ -1,0 +1,126 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="theme-color" content="#0078E7"><meta name="author" content="GEB"><meta name="copyright" content="GEB"><meta name="generator" content="Hexo 6.2.0"><meta name="theme" content="hexo-theme-yun"><title>场论及拉梅系数 | GEB</title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@900&amp;display=swap" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/star-markdown-css@0.3.3/dist/yun/yun-markdown.min.css"><link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/prism-theme-vars/base.css"><script src="https://fastly.jsdelivr.net/npm/@unocss/runtime/mini.global.js"></script><script src="https://fastly.jsdelivr.net/npm/scrollreveal/dist/scrollreveal.min.js" defer></script><script>function initScrollReveal() {
+  [".post-card",".markdown-body img"].forEach((target)=> {
+    ScrollReveal().reveal(target);
+  })
+}
+document.addEventListener("DOMContentLoaded", initScrollReveal);
+document.addEventListener("pjax:success", initScrollReveal);
+</script><link rel="icon" type="image/svg+xml" href="/yun.svg"><link rel="mask-icon" href="/yun.svg" color="#0078E7"><link rel="preload" href="/css/hexo-theme-yun.css" as="style"><link rel="prefetch" href="/js/sidebar.js" as="script"><link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin><link rel="preconnect" href="https://fastly.jsdelivr.net/npm/" crossorigin><script id="yun-config">
+    window.Yun = {}
+    window.CONFIG = {"hostname":"geb233.github.io","root":"/","title":"云游君的小站","version":"1.10.2","mode":"auto","copycode":true,"page":{"isPost":true},"i18n":{"placeholder":"搜索...","empty":"找不到您查询的内容: ${query}","hits":"找到 ${hits} 条结果","hits_time":"找到 ${hits} 条结果（用时 ${time} 毫秒）"},"anonymous_image":"https://cdn.yunyoujun.cn/img/avatar/none.jpg","say":{"api":"https://el-bot-api.vercel.app/api/words/young"},"fireworks":{"colors":null},"vendors":{"darken":"https://fastly.jsdelivr.net/npm/darken@1.5.0"}};
+  </script><link rel="stylesheet" href="/css/hexo-theme-yun.css"><script src="/js/hexo-theme-yun.js" type="module"></script><link rel="alternate" href="/atom.xml" title="GEB" type="application/atom+xml"><meta name="description" content="1直角坐标 1.1 各概念定义 \[ 设  f&#x3D;f\left( x_{1},x_{2}\ldots\ldots x_{n} \right)\hspace{25em} \] \[ 令F &#x3D; \left( {f_{x_{1}},f_{x_{2}}\ldots\ldots f_{x_{n}}} \right)&#39; &#x3D; \left( F_{1},F_{2}\ldots\ldots F_{n} \right)">
+<meta property="og:type" content="article">
+<meta property="og:title" content="场论及拉梅系数">
+<meta property="og:url" content="https://geb233.github.io/posts/db417511.html">
+<meta property="og:site_name" content="GEB">
+<meta property="og:description" content="1直角坐标 1.1 各概念定义 \[ 设  f&#x3D;f\left( x_{1},x_{2}\ldots\ldots x_{n} \right)\hspace{25em} \] \[ 令F &#x3D; \left( {f_{x_{1}},f_{x_{2}}\ldots\ldots f_{x_{n}}} \right)&#39; &#x3D; \left( F_{1},F_{2}\ldots\ldots F_{n} \right)">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://s1.ax1x.com/2022/03/11/botLJP.md.png">
+<meta property="og:image" content="https://s1.ax1x.com/2022/03/12/bTc9VP.md.png">
+<meta property="og:image" content="https://s1.ax1x.com/2022/03/11/botORf.md.png">
+<meta property="article:published_time" content="2022-05-29T13:17:11.000Z">
+<meta property="article:modified_time" content="2022-06-14T13:14:58.230Z">
+<meta property="article:author" content="GEB">
+<meta property="article:tag" content="分析">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s1.ax1x.com/2022/03/11/botLJP.md.png"><script>(function() {
+  const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+  const setting = localStorage.getItem('darken-mode') || 'auto'
+  if (setting === 'dark' || (prefersDark && setting !== 'light'))
+    document.documentElement.classList.toggle('dark', true)
+})()</script>
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+</head><body><script src="https://code.iconify.design/2/2.1.1/iconify.min.js"></script><script>// Define global variable
+IconifyProviders = {
+  // Empty prefix: overwrite default API provider configuration
+  '': {
+    // Use custom API first, use Iconify public API as backup
+    resources: [
+        'https://api.iconify.design',
+    ],
+    // Wait for 1 second before switching API hosts
+    rotate: 1000,
+  },
+};</script><script defer src="https://fastly.jsdelivr.net/npm/animejs@latest"></script><script defer src="/js/ui/fireworks.js" type="module"></script><canvas class="fireworks"></canvas><div class="container"><a class="sidebar-toggle hty-icon-button" id="menu-btn"><div class="hamburger hamburger--spin" type="button"><span class="hamburger-box"><span class="hamburger-inner"></span></span></div></a><div class="sidebar-toggle sidebar-overlay"></div><aside class="sidebar"><script src="/js/sidebar.js" type="module"></script><ul class="sidebar-nav"><li class="sidebar-nav-item sidebar-nav-toc hty-icon-button sidebar-nav-active" data-target="post-toc-wrap" title="文章目录"><span class="icon iconify" data-icon="ri:list-ordered"></span></li><li class="sidebar-nav-item sidebar-nav-overview hty-icon-button" data-target="site-overview-wrap" title="站点概览"><span class="icon iconify" data-icon="ri:passport-line"></span></li></ul><div class="sidebar-panel" id="site-overview-wrap"><div class="site-info fix-top"><a class="site-author-avatar" href="/about/" title="GEB"><img width="96" loading="lazy" src="/yun.png" alt="GEB"></a><div class="site-author-name"><a href="/about/">GEB</a></div><span class="site-name">GEB</span><sub class="site-subtitle">studying……</sub><div class="site-description"></div></div><nav class="site-state"><a class="site-state-item hty-icon-button icon-home" href="/" title="首页"><span class="site-state-item-icon"><span class="icon iconify" data-icon="ri:home-4-line"></span></span></a><div class="site-state-item"><a href="/archives/" title="归档"><span class="site-state-item-icon"><span class="icon iconify" data-icon="ri:archive-line"></span></span><span class="site-state-item-count">19</span></a></div><div class="site-state-item"><a href="/manage/categories/" title="分类"><span class="site-state-item-icon"><span class="icon iconify" data-icon="ri:folder-2-line"></span></span><span class="site-state-item-count">6</span></a></div><div class="site-state-item"><a href="/manage/tags/" title="标签"><span class="site-state-item-icon"><span class="icon iconify" data-icon="ri:price-tag-3-line"></span></span><span class="site-state-item-count">17</span></a></div><a class="site-state-item hty-icon-button" target="_blank" rel="noopener" href="https://yun.yunyoujun.cn" title="文档"><span class="site-state-item-icon"><span class="icon iconify" data-icon="ri:settings-line"></span></span></a></nav><hr style="margin-bottom:0.5rem"><hr style="margin:0.5rem 1rem"><div class="links"><a class="links-item hty-icon-button" href="/links/" title="我的小伙伴们" style="color:dodgerblue"><span class="icon iconify" data-icon="ri:genderless-line"></span></a></div><br><a class="links-item hty-icon-button" id="toggle-mode-btn" href="javascript:;" title="Mode" style="color: #f1cb64"><span class="icon iconify" data-icon="ri:contrast-2-line"></span></a></div><div class="sidebar-panel sidebar-panel-active" id="post-toc-wrap"><div class="post-toc"><div class="post-toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%9B%B4%E8%A7%92%E5%9D%90%E6%A0%87"><span class="toc-number">1.</span> <span class="toc-text">1直角坐标</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%90%84%E6%A6%82%E5%BF%B5%E5%AE%9A%E4%B9%89"><span class="toc-number">1.1.</span> <span class="toc-text">1.1 各概念定义</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%87%A0%E4%BD%95%E9%87%8F"><span class="toc-number">1.2.</span> <span class="toc-text">1.2 几何量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B9%B3%E9%9D%A2%E5%9C%BA"><span class="toc-number">1.3.</span> <span class="toc-text">1.3 平面场</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%8B%89%E6%A2%85%E7%B3%BB%E6%95%B0lame-constants"><span class="toc-number">2.</span> <span class="toc-text">2 拉梅系数（Lame constants）</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9D%90%E6%A0%87%E5%8F%98%E6%8D%A2%E8%A1%A8"><span class="toc-number">2.1.</span> <span class="toc-text">2.1 坐标变换表🔯</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9C%BA%E9%87%8F%E5%8F%98%E6%8D%A2%E5%BC%8F"><span class="toc-number">2.2.</span> <span class="toc-text">2.2场量变换式🔯</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E5%9D%90%E6%A0%87%E5%80%BC"><span class="toc-number">2.3.</span> <span class="toc-text">2.3常用坐标值</span></a></li></ol></li></ol></div></div></div></aside><main class="sidebar-translate" id="content"><div id="post"><article class="hty-card post-block" itemscope itemtype="https://schema.org/Article" style="--smc-primary:#0078E7;"><link itemprop="mainEntityOfPage" href="https://geb233.github.io/posts/db417511.html"><span hidden itemprop="author" itemscope itemtype="https://schema.org/Person"><meta itemprop="name" content="GEB"><meta itemprop="description"></span><span hidden itemprop="publisher" itemscope itemtype="https://schema.org/Organization"><meta itemprop="name" content="GEB"></span><header class="post-header"><h1 class="post-title" itemprop="name headline">场论及拉梅系数</h1><div class="post-meta"><div class="post-time"><span class="post-meta-item-icon"><span class="icon iconify" data-icon="ri:calendar-line"></span></span> <time title="创建时间：2022-05-29 21:17:11" itemprop="dateCreated datePublished" datetime="2022-05-29T21:17:11+08:00">2022-05-29</time><span class="post-meta-divider">-</span><span class="post-meta-item-icon"><span class="icon iconify" data-icon="ri:calendar-2-line"></span></span> <time title="修改时间：2022-06-14 21:14:58" itemprop="dateModified" datetime="2022-06-14T21:14:58+08:00">2022-06-14</time></div><div class="post-classify"><span class="post-category"> <span class="post-meta-item-icon" style="margin-right:3px;"><span class="icon iconify" data-icon="ri:folder-line"></span></span><span itemprop="about" itemscope itemtype="https://schema.org/Thing"><a class="category-item" href="/categories/%E6%95%B0%E5%AD%A6/" style="--text-color:var(--hty-text-color)" itemprop="url" rel="index"><span itemprop="text">数学</span></a></span></span><span class="post-tag"><span class="post-meta-divider">-</span><a class="tag-item" href="/tags/%E5%88%86%E6%9E%90/" style="--text-color:var(--hty-text-color)"><span class="post-meta-item-icon"><span class="icon iconify" data-icon="ri:price-tag-3-line"></span></span><span class="tag-name">分析</span></a></span></div></div></header><section class="post-body" itemprop="articleBody"><div class="post-content markdown-body"><h1 id="直角坐标">1直角坐标</h1>
+<h2 id="各概念定义">1.1 各概念定义</h2>
+<p><span class="math display">\[
+设  f=f\left( x_{1},x_{2}\ldots\ldots x_{n} \right)\hspace{25em}
+\]</span></p>
+<p><span class="math display">\[
+令F = \left( {f_{x_{1}},f_{x_{2}}\ldots\ldots f_{x_{n}}} \right)' =
+\left( F_{1},F_{2}\ldots\ldots F_{n} \right)'\hspace{15em}
+\]</span></p>
+<p>则有：</p>
+<p><span class="math display">\[
+梯度：\nabla f = F\hspace{25em}
+\]</span></p>
+<p><span class="math display">\[
+散度：\nabla \cdot F = \nabla^{2}f = {\sum\left( F_{i} \right)_{x_{i}}}
+= {\sum f_{ii}}\hspace{14em}
+\]</span></p>
+<p><span class="math display">\[
+旋度：\nabla \times F = \begin{pmatrix}
+\overset{\rightarrow}{i} &amp; \overset{\rightarrow}{j} &amp;
+\overset{\rightarrow}{k} \\
+{\partial x} &amp; {\partial y} &amp; {\partial z} \\
+f_{1} &amp; f_{2} &amp; f_{3} \\
+\end{pmatrix}\hspace{17em}
+\]</span></p>
+<h2 id="几何量">1.2 几何量</h2>
+<p><span class="math display">\[
+线微元：\hspace{26em}\\
+dl_{i} = H_{i}dr_{i}\\
+度量距离：\hspace{20em}\\
+\left| {ds} \right| = \sqrt{\sum{d^{2}l_{i}}}\\
+体积微元：\hspace{25em}\\
+dV = H{\prod{dr_{i}}}\\
+面积微元：\hspace{25em}\\
+dA_{i} = \frac{dV}{dl_{i}}
+\]</span></p>
+<h2 id="平面场">1.3 平面场</h2>
+<p><span class="math display">\[
+f=f\left( x,y\right)\hspace{26em}\\F=\left( f_{x},f_{y}
+\right)'=(P,Q)'\hspace{21em}
+\]</span></p>
+<p>满足散度为零，旋度为零：</p>
+<p><span class="math display">\[
+\left\{ \begin{matrix}
+{P_{x} + Q_{y} = 0} \hspace{5em}\\\\
+{\left| \begin{matrix}
+{\partial x} &amp; {\partial y} \\
+P &amp; Q \\
+\end{matrix} \right| = Q_{x} - P_{y} = 0} \\
+\end{matrix} \right.
+\]</span></p>
+<p>将复变函数视为平面场</p>
+<p><span class="math display">\[
+z = iP\left( x,y \right) + Q\left( x,y \right)
+\]</span></p>
+<p>柯西黎曼条件为：</p>
+<p><span class="math display">\[
+\left\{ \begin{matrix}
+{P_{x} + Q_{y} = 0} \\
+{P_{y} = Q_{x}} \hspace{2em}\\
+\end{matrix} \right.
+\]</span></p>
+<h1 id="拉梅系数lame-constants">2 拉梅系数（Lame constants）</h1>
+<p><span class="math display">\[
+对f\left( x_{1},x_{2}\ldots\ldots x_{n}
+\right)，若存在另外一组坐标\left( r_{1},r_{2}\ldots\ldots r_{m}
+\right),\\且其之间存在：\hspace{25em}\\
+\left\{ \begin{matrix}
+{x_{1} = x_{1}\left( r_{1},r_{2}\ldots\ldots r_{m} \right)} \\
+{x_{i} = x_{i}\left( r_{1},r_{2}\ldots\ldots r_{m} \right)} \\
+{x_{n} = x_{n}\left( r_{1},r_{2}\ldots\ldots r_{m} \right)} \\
+\end{matrix} \right.
+\]</span></p>
+<h2 id="坐标变换表">2.1 坐标变换表🔯</h2>
+<p><img src="https://s1.ax1x.com/2022/03/11/botLJP.md.png" class="lazyload placeholder" data-srcset="https://s1.ax1x.com/2022/03/11/botLJP.md.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg"></p>
+<p><span class="math display">\[
+H = H_{1}H_{2}\ldots\ldots H_{m}
+\]</span></p>
+<h2 id="场量变换式">2.2场量变换式🔯</h2>
+<p><img src="https://s1.ax1x.com/2022/03/12/bTc9VP.md.png" class="lazyload placeholder" data-srcset="https://s1.ax1x.com/2022/03/12/bTc9VP.md.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg"></p>
+<h2 id="常用坐标值">2.3常用坐标值</h2>
+<p><img src="https://s1.ax1x.com/2022/03/11/botORf.md.png" class="lazyload placeholder" data-srcset="https://s1.ax1x.com/2022/03/11/botORf.md.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg"></p>
+</div></section><div id="reward-container"><span class="hty-icon-button button-glow" id="reward-button" title="打赏" onclick="var qr = document.getElementById(&quot;qr&quot;); qr.style.display = (qr.style.display === &quot;none&quot;) ? &quot;block&quot; : &quot;none&quot;;"><span class="icon iconify" data-icon="ri:hand-coin-line"></span></span><div id="reward-comment">I'm so cute. Please give me money.</div></div><ul class="post-copyright"><li class="post-copyright-author"><strong>本文作者：</strong>GEB</li><li class="post-copyright-link"><strong>本文链接：</strong><a href="https://geb233.github.io/posts/db417511.html" title="场论及拉梅系数">https://geb233.github.io/posts/db417511.html</a></li><li class="post-copyright-license"><strong>版权声明：</strong>本博客所有文章除特别声明外，均默认采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="noopener" title="CC BY-NC-SA 4.0 "><span class="icon iconify" data-icon="ri:creative-commons-line"></span><span class="icon iconify" data-icon="ri:creative-commons-by-line"></span><span class="icon iconify" data-icon="ri:creative-commons-nc-line"></span><span class="icon iconify" data-icon="ri:creative-commons-sa-line"></span></a> 许可协议。</li></ul></article><div class="post-nav"><div class="post-nav-item"><a class="post-nav-prev" href="/posts/90e554e9.html" rel="prev" title="曲线投影"><span class="icon iconify" data-icon="ri:arrow-left-s-line"></span><span class="post-nav-text">曲线投影</span></a></div><div class="post-nav-item"><a class="post-nav-next" href="/posts/25281569.html" rel="next" title="导航栏"><span class="post-nav-text">导航栏</span><span class="icon iconify" data-icon="ri:arrow-right-s-line"></span></a></div></div></div><div class="hty-card" id="comment"></div></main><footer class="sidebar-translate" id="footer"><div class="copyright"><span>&copy; 2019 – 2023 </span><span class="with-love" id="animate"><span class="icon iconify" data-icon="ri:cloud-line"></span></span><span class="author"> GEB</span></div><div class="powered"><span>由 <a href="https://hexo.io" target="_blank" rel="noopener">Hexo</a> 驱动 v6.2.0</span><span class="footer-separator">|</span><span>主题 - <a rel="noopener" href="https://github.com/YunYouJun/hexo-theme-yun" target="_blank"><span>Yun</span></a> v1.10.2</span></div></footer></div><a class="hty-icon-button" id="back-to-top" aria-label="back-to-top" href="#"><span class="icon iconify" data-icon="ri:arrow-up-s-line"></span><svg class="progress-circle-container" viewBox="0 0 100 100"><circle class="progress-circle" id="progressCircle" cx="50" cy="50" r="48" fill="none" stroke="#0078E7" stroke-width="2" stroke-linecap="round"></circle></svg></a><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/haruto.model.json"},"display":{"position":"left","width":150,"height":300},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body></html>

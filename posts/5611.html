@@ -1,0 +1,136 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="theme-color" content="#0078E7"><meta name="author" content="GEB"><meta name="copyright" content="GEB"><meta name="generator" content="Hexo 6.2.0"><meta name="theme" content="hexo-theme-yun"><title>MD写法 | GEB</title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@900&amp;display=swap" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/star-markdown-css@0.3.3/dist/yun/yun-markdown.min.css"><link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/prism-theme-vars/base.css"><script src="https://fastly.jsdelivr.net/npm/@unocss/runtime/mini.global.js"></script><script src="https://fastly.jsdelivr.net/npm/scrollreveal/dist/scrollreveal.min.js" defer></script><script>function initScrollReveal() {
+  [".post-card",".markdown-body img"].forEach((target)=> {
+    ScrollReveal().reveal(target);
+  })
+}
+document.addEventListener("DOMContentLoaded", initScrollReveal);
+document.addEventListener("pjax:success", initScrollReveal);
+</script><link rel="icon" type="image/svg+xml" href="/yun.svg"><link rel="mask-icon" href="/yun.svg" color="#0078E7"><link rel="preload" href="/css/hexo-theme-yun.css" as="style"><link rel="prefetch" href="/js/sidebar.js" as="script"><link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin><link rel="preconnect" href="https://fastly.jsdelivr.net/npm/" crossorigin><script id="yun-config">
+    window.Yun = {}
+    window.CONFIG = {"hostname":"geb233.github.io","root":"/","title":"云游君的小站","version":"1.10.2","mode":"auto","copycode":true,"page":{"isPost":true},"i18n":{"placeholder":"搜索...","empty":"找不到您查询的内容: ${query}","hits":"找到 ${hits} 条结果","hits_time":"找到 ${hits} 条结果（用时 ${time} 毫秒）"},"anonymous_image":"https://cdn.yunyoujun.cn/img/avatar/none.jpg","say":{"api":"https://el-bot-api.vercel.app/api/words/young"},"fireworks":{"colors":null},"vendors":{"darken":"https://fastly.jsdelivr.net/npm/darken@1.5.0"}};
+  </script><link rel="stylesheet" href="/css/hexo-theme-yun.css"><script src="/js/hexo-theme-yun.js" type="module"></script><link rel="alternate" href="/atom.xml" title="GEB" type="application/atom+xml"><meta name="description" content="整理几种常用软件的文本标记格式，包括typora、jupyter、wolai。基本基于markdown语法，结合一些latex、html内容。 1 篇章结构 换行 直接换行：Typora，wolai。单Enter有行距，换段。Shift+Enter无行距。 格式换行：jupyter，直接换行后显示为不换行内容。  空格两次再换行 回车两次，换段&#x2F;有行距。  转译字符 \ ，通用。 如&#39;&amp;&#39;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MD写法">
+<meta property="og:url" content="https://geb233.github.io/posts/5611.html">
+<meta property="og:site_name" content="GEB">
+<meta property="og:description" content="整理几种常用软件的文本标记格式，包括typora、jupyter、wolai。基本基于markdown语法，结合一些latex、html内容。 1 篇章结构 换行 直接换行：Typora，wolai。单Enter有行距，换段。Shift+Enter无行距。 格式换行：jupyter，直接换行后显示为不换行内容。  空格两次再换行 回车两次，换段&#x2F;有行距。  转译字符 \ ，通用。 如&#39;&amp;&#39;">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://static.runoob.com/images/runoob-logo.png">
+<meta property="og:image" content="http://static.runoob.com/images/runoob-logo.png">
+<meta property="article:published_time" content="2022-05-26T07:25:02.000Z">
+<meta property="article:modified_time" content="2022-06-01T15:40:14.427Z">
+<meta property="article:author" content="GEB">
+<meta property="article:tag" content="文档写法">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://static.runoob.com/images/runoob-logo.png"><script>(function() {
+  const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+  const setting = localStorage.getItem('darken-mode') || 'auto'
+  if (setting === 'dark' || (prefersDark && setting !== 'light'))
+    document.documentElement.classList.toggle('dark', true)
+})()</script>
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+</head><body><script src="https://code.iconify.design/2/2.1.1/iconify.min.js"></script><script>// Define global variable
+IconifyProviders = {
+  // Empty prefix: overwrite default API provider configuration
+  '': {
+    // Use custom API first, use Iconify public API as backup
+    resources: [
+        'https://api.iconify.design',
+    ],
+    // Wait for 1 second before switching API hosts
+    rotate: 1000,
+  },
+};</script><script defer src="https://fastly.jsdelivr.net/npm/animejs@latest"></script><script defer src="/js/ui/fireworks.js" type="module"></script><canvas class="fireworks"></canvas><div class="container"><a class="sidebar-toggle hty-icon-button" id="menu-btn"><div class="hamburger hamburger--spin" type="button"><span class="hamburger-box"><span class="hamburger-inner"></span></span></div></a><div class="sidebar-toggle sidebar-overlay"></div><aside class="sidebar"><script src="/js/sidebar.js" type="module"></script><ul class="sidebar-nav"><li class="sidebar-nav-item sidebar-nav-toc hty-icon-button sidebar-nav-active" data-target="post-toc-wrap" title="文章目录"><span class="icon iconify" data-icon="ri:list-ordered"></span></li><li class="sidebar-nav-item sidebar-nav-overview hty-icon-button" data-target="site-overview-wrap" title="站点概览"><span class="icon iconify" data-icon="ri:passport-line"></span></li></ul><div class="sidebar-panel" id="site-overview-wrap"><div class="site-info fix-top"><a class="site-author-avatar" href="/about/" title="GEB"><img width="96" loading="lazy" src="/yun.png" alt="GEB"></a><div class="site-author-name"><a href="/about/">GEB</a></div><span class="site-name">GEB</span><sub class="site-subtitle">studying……</sub><div class="site-description"></div></div><nav class="site-state"><a class="site-state-item hty-icon-button icon-home" href="/" title="首页"><span class="site-state-item-icon"><span class="icon iconify" data-icon="ri:home-4-line"></span></span></a><div class="site-state-item"><a href="/archives/" title="归档"><span class="site-state-item-icon"><span class="icon iconify" data-icon="ri:archive-line"></span></span><span class="site-state-item-count">19</span></a></div><div class="site-state-item"><a href="/manage/categories/" title="分类"><span class="site-state-item-icon"><span class="icon iconify" data-icon="ri:folder-2-line"></span></span><span class="site-state-item-count">6</span></a></div><div class="site-state-item"><a href="/manage/tags/" title="标签"><span class="site-state-item-icon"><span class="icon iconify" data-icon="ri:price-tag-3-line"></span></span><span class="site-state-item-count">17</span></a></div><a class="site-state-item hty-icon-button" target="_blank" rel="noopener" href="https://yun.yunyoujun.cn" title="文档"><span class="site-state-item-icon"><span class="icon iconify" data-icon="ri:settings-line"></span></span></a></nav><hr style="margin-bottom:0.5rem"><hr style="margin:0.5rem 1rem"><div class="links"><a class="links-item hty-icon-button" href="/links/" title="我的小伙伴们" style="color:dodgerblue"><span class="icon iconify" data-icon="ri:genderless-line"></span></a></div><br><a class="links-item hty-icon-button" id="toggle-mode-btn" href="javascript:;" title="Mode" style="color: #f1cb64"><span class="icon iconify" data-icon="ri:contrast-2-line"></span></a></div><div class="sidebar-panel sidebar-panel-active" id="post-toc-wrap"><div class="post-toc"><div class="post-toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AF%87%E7%AB%A0%E7%BB%93%E6%9E%84"><span class="toc-number">1.</span> <span class="toc-text">1 篇章结构</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8D%A2%E8%A1%8C"><span class="toc-number">1.1.</span> <span class="toc-text">换行</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BD%AC%E8%AF%91%E5%AD%97%E7%AC%A6"><span class="toc-number">1.2.</span> <span class="toc-text">转译字符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A6%96%E8%A1%8C%E7%BC%A9%E8%BF%9B"><span class="toc-number">1.3.</span> <span class="toc-text">首行缩进</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%87%E9%A2%98%E5%B1%82%E6%AC%A1"><span class="toc-number">1.4.</span> <span class="toc-text">标题层次</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8C%BA%E5%9D%97%E5%BC%95%E7%94%A8"><span class="toc-number">1.5.</span> <span class="toc-text">区块引用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%97%E8%A1%A8-%E8%A1%A8%E6%A0%BC"><span class="toc-number">1.6.</span> <span class="toc-text">列表 表格</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%BD%A2%E5%BC%8F%E8%AE%BE%E8%AE%A1"><span class="toc-number">2.</span> <span class="toc-text">2 形式设计</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E6%A0%B7%E5%BC%8F"><span class="toc-number">2.1.</span> <span class="toc-text">字符样式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A2%9C%E8%89%B2"><span class="toc-number">2.2.</span> <span class="toc-text">颜色</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%8F%92%E5%85%A5%E5%85%AC%E5%BC%8F"><span class="toc-number">3.</span> <span class="toc-text">3 插入公式</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%8F%92%E5%85%A5%E9%93%BE%E6%8E%A5"><span class="toc-number">4.</span> <span class="toc-text">4 插入链接</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8F%92%E5%85%A5%E9%93%BE%E6%8E%A5-1"><span class="toc-number">4.1.</span> <span class="toc-text">插入链接</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87"><span class="toc-number">4.2.</span> <span class="toc-text">插入图片</span></a></li></ol></li></ol></div></div></div></aside><main class="sidebar-translate" id="content"><div id="post"><article class="hty-card post-block" itemscope itemtype="https://schema.org/Article" style="--smc-primary:#0078E7;"><link itemprop="mainEntityOfPage" href="https://geb233.github.io/posts/5611.html"><span hidden itemprop="author" itemscope itemtype="https://schema.org/Person"><meta itemprop="name" content="GEB"><meta itemprop="description"></span><span hidden itemprop="publisher" itemscope itemtype="https://schema.org/Organization"><meta itemprop="name" content="GEB"></span><header class="post-header"><h1 class="post-title" itemprop="name headline">MD写法</h1><div class="post-meta"><div class="post-time"><span class="post-meta-item-icon"><span class="icon iconify" data-icon="ri:calendar-line"></span></span> <time title="创建时间：2022-05-26 15:25:02" itemprop="dateCreated datePublished" datetime="2022-05-26T15:25:02+08:00">2022-05-26</time><span class="post-meta-divider">-</span><span class="post-meta-item-icon"><span class="icon iconify" data-icon="ri:calendar-2-line"></span></span> <time title="修改时间：2022-06-01 23:40:14" itemprop="dateModified" datetime="2022-06-01T23:40:14+08:00">2022-06-01</time></div><div class="post-classify"><span class="post-category"> <span class="post-meta-item-icon" style="margin-right:3px;"><span class="icon iconify" data-icon="ri:folder-line"></span></span><span itemprop="about" itemscope itemtype="https://schema.org/Thing"><a class="category-item" href="/categories/hexo/" style="--text-color:var(--hty-text-color)" itemprop="url" rel="index"><span itemprop="text">hexo</span></a></span></span><span class="post-tag"><span class="post-meta-divider">-</span><a class="tag-item" href="/tags/%E6%96%87%E6%A1%A3%E5%86%99%E6%B3%95/" style="--text-color:var(--hty-text-color)"><span class="post-meta-item-icon"><span class="icon iconify" data-icon="ri:price-tag-3-line"></span></span><span class="tag-name">文档写法</span></a></span></div></div></header><section class="post-body" itemprop="articleBody"><div class="post-content markdown-body"><p>整理几种常用软件的文本标记格式，包括typora、jupyter、wolai。基本基于markdown语法，结合一些latex、html内容。</p>
+<h1 id="篇章结构">1 篇章结构</h1>
+<h2 id="换行">换行</h2>
+<p>直接换行：Typora，wolai。单Enter有行距，换段。Shift+Enter无行距。</p>
+<p>格式换行：jupyter，直接换行后显示为不换行内容。</p>
+<ul>
+<li>空格两次再换行</li>
+<li>回车两次，换段/有行距。</li>
+</ul>
+<h2 id="转译字符">转译字符</h2>
+<p>\ ，通用。</p>
+<p>如'&amp;'ensp;，当直接输入被编译为空格，执行操作且不显示。因此使用<br>
+</p>
+<h2 id="首行缩进">首行缩进</h2>
+<ul>
+<li>手动空格几次。优：简单；缺，每次手敲，不好统一。</li>
+<li>Tab两次。Typora、Wolai，优缺同上。</li>
+<li>’&amp;‘emsp;中文空格编译符，使用时连续输入两次，也可用&amp;#8195。适于jupyter。</li>
+<li>Html标签。’&lt;‘p style="text-indent:2em"&gt;内容&lt;/p&gt;
+。通用。</li>
+</ul>
+<h2 id="标题层次">标题层次</h2>
+<ul>
+<li>#,##,### 通用</li>
+<li>Ctrl+1,2,3 Typora</li>
+</ul>
+<h2 id="区块引用">区块引用</h2>
+<p>&gt;,&gt;&gt;,&gt;&gt;&gt;。样式如下</p>
+<blockquote>
+<p>一次引用</p>
+<blockquote>
+<p>二次引用</p>
+<blockquote>
+<p>三次引用</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<h2 id="列表-表格">列表 表格</h2>
+<ul>
+<li>无序 ：*+空格</li>
+</ul>
+<ol type="1">
+<li>有序：1.+空格</li>
+</ol>
+<p><strong>列表</strong>：wolai,Typora均能可视化编辑表格。复制到Jupyter里。</p>
+<h1 id="形式设计">2 形式设计</h1>
+<h2 id="字符样式">字符样式</h2>
+<ul>
+<li>黑体加粗。Ctrl+B。**内容**。<strong>内容</strong></li>
+<li>倾斜。*内容*。<em>内容</em></li>
+<li>斜体加粗。***内容***。<strong><em>内容</em></strong></li>
+<li>删除线。~~内容~~。<del>内容</del></li>
+</ul>
+<h2 id="颜色">颜色</h2>
+<p><strong>文字颜色</strong></p>
+<ul>
+<li>可视化编辑。wolai，typora。</li>
+<li>Html 标记。'&lt;'font color='red'&gt; 红色文本 通用</li>
+</ul>
+<p><strong>文字背景</strong></p>
+<ul>
+<li>可视化编辑。wolai，typora</li>
+<li>'&lt;'mark&gt;黄色高亮。通用</li>
+</ul>
+<h1 id="插入公式">3 插入公式</h1>
+<p>完全使用Latex语法</p>
+<p><strong>行内公式：</strong>输入特殊字符，简单公式，上下标等</p>
+<ul>
+<li>$ 公式 $，统一</li>
+<li>，wolai</li>
+</ul>
+<p>※ 行内代码：`code`,效果如<code>code</code></p>
+<p><strong>整行公式：</strong>公式展示</p>
+<ul>
+<li>$$公式$$，统一</li>
+<li>直接插入。typora。</li>
+<li>，wolai。</li>
+</ul>
+<h1 id="插入链接">4 插入链接</h1>
+<h2 id="插入链接-1">插入链接</h2>
+<p>[插入链接](https://www.runoob.com/markdown/md-link.html)</p>
+<p><a target="_blank" rel="noopener" href="https://www.runoob.com/markdown/md-link.html">插入链接</a></p>
+<p>内部链接：</p>
+<p>被引处：&lt;span id="jump"&gt;跳转到的地方&lt;/span&gt;</p>
+<p>引用处：[点击跳转](#jump)</p>
+<h2 id="插入图片">插入图片</h2>
+<p><strong>引用图床</strong></p>
+<p>![](http://static.runoob.com/images/runoob-logo.png)</p>
+<p><img src="http://static.runoob.com/images/runoob-logo.png" class="lazyload placeholder" data-srcset="http://static.runoob.com/images/runoob-logo.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg"></p>
+<p><strong>简单属性编辑</strong></p>
+<p>'&lt;'img src="http://static.runoob.com/images/runoob-logo.png"
+width="50%"&gt;</p>
+<p><img src="http://static.runoob.com/images/runoob-logo.png" class="lazyload placeholder" data-srcset="http://static.runoob.com/images/runoob-logo.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" width="50%"></p>
+</div></section><div id="reward-container"><span class="hty-icon-button button-glow" id="reward-button" title="打赏" onclick="var qr = document.getElementById(&quot;qr&quot;); qr.style.display = (qr.style.display === &quot;none&quot;) ? &quot;block&quot; : &quot;none&quot;;"><span class="icon iconify" data-icon="ri:hand-coin-line"></span></span><div id="reward-comment">I'm so cute. Please give me money.</div></div><ul class="post-copyright"><li class="post-copyright-author"><strong>本文作者：</strong>GEB</li><li class="post-copyright-link"><strong>本文链接：</strong><a href="https://geb233.github.io/posts/5611.html" title="MD写法">https://geb233.github.io/posts/5611.html</a></li><li class="post-copyright-license"><strong>版权声明：</strong>本博客所有文章除特别声明外，均默认采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="noopener" title="CC BY-NC-SA 4.0 "><span class="icon iconify" data-icon="ri:creative-commons-line"></span><span class="icon iconify" data-icon="ri:creative-commons-by-line"></span><span class="icon iconify" data-icon="ri:creative-commons-nc-line"></span><span class="icon iconify" data-icon="ri:creative-commons-sa-line"></span></a> 许可协议。</li></ul></article><div class="post-nav"><div class="post-nav-item"><a class="post-nav-prev" href="/posts/592e.html" rel="prev" title="jupyter内核配置"><span class="icon iconify" data-icon="ri:arrow-left-s-line"></span><span class="post-nav-text">jupyter内核配置</span></a></div><div class="post-nav-item"><a class="post-nav-next" href="/posts/29eb.html" rel="next" title="三次方程近似解"><span class="post-nav-text">三次方程近似解</span><span class="icon iconify" data-icon="ri:arrow-right-s-line"></span></a></div></div></div><div class="hty-card" id="comment"></div></main><footer class="sidebar-translate" id="footer"><div class="copyright"><span>&copy; 2019 – 2023 </span><span class="with-love" id="animate"><span class="icon iconify" data-icon="ri:cloud-line"></span></span><span class="author"> GEB</span></div><div class="powered"><span>由 <a href="https://hexo.io" target="_blank" rel="noopener">Hexo</a> 驱动 v6.2.0</span><span class="footer-separator">|</span><span>主题 - <a rel="noopener" href="https://github.com/YunYouJun/hexo-theme-yun" target="_blank"><span>Yun</span></a> v1.10.2</span></div></footer></div><a class="hty-icon-button" id="back-to-top" aria-label="back-to-top" href="#"><span class="icon iconify" data-icon="ri:arrow-up-s-line"></span><svg class="progress-circle-container" viewBox="0 0 100 100"><circle class="progress-circle" id="progressCircle" cx="50" cy="50" r="48" fill="none" stroke="#0078E7" stroke-width="2" stroke-linecap="round"></circle></svg></a><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/haruto.model.json"},"display":{"position":"left","width":150,"height":300},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body></html>
