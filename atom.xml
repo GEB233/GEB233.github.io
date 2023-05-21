@@ -6,7 +6,7 @@
   <link href="https://geb233.github.io/atom.xml" rel="self"/>
   
   <link href="https://geb233.github.io/"/>
-  <updated>2022-07-30T14:01:27.145Z</updated>
+  <updated>2023-05-21T02:02:49.252Z</updated>
   <id>https://geb233.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Blog迁移</title>
+    <link href="https://geb233.github.io/posts/baf8ca35.html"/>
+    <id>https://geb233.github.io/posts/baf8ca35.html</id>
+    <published>2023-05-21T01:27:53.000Z</published>
+    <updated>2023-05-21T02:02:49.252Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="软件准备">软件准备</h2><p>node.js<br>Git</p><p>其他问题</p><p>因更换公式渲染hexo-renderer-pandoc，而这个插件需要依赖软件pandoc</p><p>故需下载pandoc</p><blockquote><p>pandoc也是文件格式【pdf、docx、markdown、html等】转换利器，推荐下载</p></blockquote><h3 id="ssh配置">SSH配置</h3><blockquote><p>SSH是本地电脑和Github连接的凭证，独立于博客文件，可独立设置。</p></blockquote><p>1.连接Github</p><p>​ 打开git bash窗口，执行如下命令：</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> config --global user.name <span class="token string">"yourname"</span><span class="token function">git</span> config --global user.email <span class="token string">"youremail"</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p>2.生成ssh</p><p>打开git bash窗口，执行如下命令：</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">ssh-keygen -t rsa -C <span class="token string">"youremail"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>然后敲三次回车</p><blockquote><p>这一步是输入密码，回车跳过默认无密码。若使用密码，之后每次上传都要输入密码</p></blockquote><p>3.搜索id_rsa.pub文件，使用记事本打开，其中内容即本机ssh</p><h3 id="添加ssh-key到github">添加SSH Key到GitHub</h3><p>Github-个人界面-Settings-SSH and GPG keys-新建</p><blockquote><p>详见：<a href="https://blog.csdn.net/qq_36667170/article/details/79094257">Git教程SSH keys配置_Ann's Blog的博客-CSDN博客</a></p></blockquote><h2 id="文件迁移">文件迁移</h2><p>1.复制原文件夹到新目录</p><p>2.删除部分文件</p><ul><li>.git：无论是在站点根目录下，还是主题目录下的.git文件，都可以删掉。</li><li>node_modules：在用<code>npm install</code>会重新生成</li><li>public：<code>hexo g</code>会重新生成</li><li>.deploy_git：在使用hexo d时也会重新生成</li><li>db.json文件</li></ul><p>3.重新安装必要配置</p><p>新目录下git bash</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>4.熟悉指令，开始新blog</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo new 文件名   新建文档hexo c清除缓存hexo g更新hexo s打开本地服务器，预览效果hexo d部署到Githubhexo c<span class="token operator">&amp;&amp;</span>hexo g<span class="token operator">&amp;&amp;</span>hexo d一套连招<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    <category term="hexo" scheme="https://geb233.github.io/categories/hexo/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>立意论</title>
